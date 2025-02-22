@@ -3,6 +3,16 @@
 	"EngineAssociation": "5.3",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "SQUAD",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "OpenXR",
@@ -30,6 +40,10 @@
 				"Linux",
 				"Android"
 			]
+		},
+		{
+			"Name": "Cargo",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
