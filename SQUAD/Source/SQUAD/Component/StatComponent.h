@@ -25,4 +25,12 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 		
+public:
+
+	UPROPERTY(EditAnywhere,Category=Stat)
+	int32 Current_Hp;
+
+	UPROPERTY(EditAnywhere, Category = Stat)
+	int32 Max_Hp;
+
 };
