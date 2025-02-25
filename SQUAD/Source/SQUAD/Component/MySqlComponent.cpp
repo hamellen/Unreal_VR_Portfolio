@@ -47,20 +47,10 @@ bool UMySqlComponent::ConnectToDataBase(const FString& host, int32 port, const F
 	string str_password = TCHAR_TO_UTF8(*password);
 	string str_schema = TCHAR_TO_UTF8(*schema);
 
-	try {
-	
-		m_Session = new mysqlx::Session(str_host, port, str_username, str_password);
-		m_SchemaDB = new mysqlx::Schema(m_Session->getSchema(str_schema));
+	m_Session = new mysqlx::Session(str_host, port, str_username, str_password);
+	m_SchemaDB = new mysqlx::Schema(m_Session->getSchema(str_schema));
 
-		return true;
-	}
-	catch (const mysqlx::Error& err) {
-	
-		return false;
-		
-	}
-
-	
+	return true;
 }
 
 bool UMySqlComponent::InsertIntoDatabase(const FString& tablename, const FString& username, const FString& password)
@@ -71,21 +61,12 @@ bool UMySqlComponent::InsertIntoDatabase(const FString& tablename, const FString
 		return false;
 	}
 
-	try {
-	
-		mysqlx::Table table = m_SchemaDB->getTable(TCHAR_TO_UTF8(*tablename));
-		table.insert("user_name", "password").values(TCHAR_TO_UTF8(*username), TCHAR_TO_UTF8(*password));
-		
+	mysqlx::Table table = m_SchemaDB->getTable(TCHAR_TO_UTF8(*tablename));
+	table.insert("user_name", "password").values(TCHAR_TO_UTF8(*username), TCHAR_TO_UTF8(*password));
 
-		return true;
-	}
-	catch (const mysqlx::Error& err) {
+
+	return true;
 	
-		
-	
-		
-	}
-	return false;
 }
 
 void UMySqlComponent::CloseDatabaseConnection()
@@ -94,6 +75,11 @@ void UMySqlComponent::CloseDatabaseConnection()
 	
 		delete m_Session;
 		m_Session = nullptr;
+	}
+
+	if (m_SchemaDB) {
+		delete m_SchemaDB;
+		m_SchemaDB = nullptr;
 	}
 
 }

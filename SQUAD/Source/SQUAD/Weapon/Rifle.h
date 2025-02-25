@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Rifle.generated.h"
 
+
 UCLASS(Abstract)
 class SQUAD_API ARifle : public AActor
 {
@@ -23,12 +24,27 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere,Category=Mesh)
+	TObjectPtr<USkeletalMeshComponent> main_part;
+
+	UPROPERTY(EditAnywhere, Category = Mesh)
+	TObjectPtr<UStaticMeshComponent> grip;
+
+	UPROPERTY(EditAnywhere, Category = Mesh)
+	TObjectPtr<UStaticMeshComponent> magazine;
+
+	UPROPERTY(EditAnywhere, Category = Mesh)
+	TObjectPtr<UStaticMeshComponent> scope;
+
 
 	UPROPERTY(EditAnywhere,Category= GUN)
 	int32 current_ammo;
 
 	UPROPERTY(EditAnywhere, Category = GUN)
 	int32 max_ammo;
+
+
+
 
 public:
 

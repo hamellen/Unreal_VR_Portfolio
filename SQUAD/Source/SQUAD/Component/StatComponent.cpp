@@ -19,7 +19,7 @@ void UStatComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	Current_Hp = Max_Hp;
 	
 }
 
