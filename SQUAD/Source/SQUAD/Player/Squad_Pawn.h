@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+
 #include "Squad_Pawn.generated.h"
 
 class UInputAction;
@@ -12,6 +13,8 @@ class UCapsuleComponent;
 class UStatComponent;
 struct FInputActionValue;
 class UPawnMovementComponent;
+class ASquad_Hand;
+
 UCLASS()
 class SQUAD_API ASquad_Pawn : public APawn
 {
@@ -36,7 +39,20 @@ public:
 	TObjectPtr<UInputAction> MoveAction;
 
 	UPROPERTY(EditAnywhere, Category = Input)
-	TObjectPtr<UInputAction> FireAction;
+	TObjectPtr<UInputAction> IA_Left_Grip;
+
+	UPROPERTY(EditAnywhere, Category = Input)
+	TObjectPtr<UInputAction> IA_Left_Trigger;
+
+	UPROPERTY(EditAnywhere, Category = Input)
+	TObjectPtr<UInputAction> IA_Right_Grip;
+
+	UPROPERTY(EditAnywhere, Category = Input)
+	TObjectPtr<UInputAction> IA_Right_Trigger;
+
+
+
+
 
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = Capsule)
 	TObjectPtr<UCapsuleComponent> CapsuleComponent;
@@ -56,7 +72,24 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = VR)
 	TObjectPtr<USceneComponent> Base_Root;
 
+	
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Hand)
+	TObjectPtr<ASquad_Hand> Right_Hand;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Hand)
+	TObjectPtr<ASquad_Hand> Left_Hand;
+
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category=Height)
 	float Desired_height;
+
+	void Left_Grip(const FInputActionValue& Value);
+	void Left_Trigger(const FInputActionValue& Value);
+	void Right_Grip(const FInputActionValue& Value);
+	void Right_Trigger(const FInputActionValue& Value);
+	void Move(const FInputActionValue& Value);
+
+	void Spawn_Hands();
 
 };

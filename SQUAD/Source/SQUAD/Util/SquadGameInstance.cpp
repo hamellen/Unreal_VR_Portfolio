@@ -17,7 +17,7 @@ USquadGameInstance::USquadGameInstance()
 USquadGameInstance::~USquadGameInstance()
 {
 	
-
+	CloseDatabaseConnection();
 }
 
 void USquadGameInstance::Init()

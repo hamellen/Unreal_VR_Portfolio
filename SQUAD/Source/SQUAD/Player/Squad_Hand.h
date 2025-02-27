@@ -28,6 +28,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, Category = Hand)
+	TObjectPtr<USceneComponent> Base_Root;
+
+
 	UPROPERTY(EditAnywhere,Category=Hand)
 	TObjectPtr<UMotionControllerComponent> motioncontroller;
 
@@ -37,8 +41,11 @@ public:
 	UPROPERTY(EditAnywhere,Category=Tag)
 	FGameplayTag hand_tag = FGameplayTag::EmptyTag;
 
-	UPROPERTY(EditAnywhere, Category = Tag)
-	FGameplayTag left_tag = FGameplayTag::RequestGameplayTag("VR.HAND.LEFT");
+	
+	
+
+
+
 
 	
 };

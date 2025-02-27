@@ -3,6 +3,9 @@
 
 #include "SquadPlayerController.h"
 #include "EnhancedInputSubsystems.h"
+#include "InputMappingContext.h"
+
+
 
 void ASquadPlayerController::BeginPlay()
 {
@@ -11,8 +14,9 @@ void ASquadPlayerController::BeginPlay()
 	if (auto* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer()))
 	{
 		Subsystem->AddMappingContext(Vr_Mapping, 0);
+		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Mapping Complete"));
 	}
-
+	
 }
 
 void ASquadPlayerController::SetupInputComponent()
