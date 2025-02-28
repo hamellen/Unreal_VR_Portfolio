@@ -58,7 +58,8 @@ public:
 	UPROPERTY(EditAnywhere)
 	FName muzzle_socket;
 
-	
+	UPROPERTY(EditAnywhere, Category = Collision)
+	TObjectPtr<class UGrabComponent> GrabComponent;
 
 	
 

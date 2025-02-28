@@ -3,6 +3,7 @@
 
 #include "Magazine.h"
 #include "Components/BoxComponent.h"
+#include "../Component//GrabComponent.h"
 // Sets default values
 AMagazine::AMagazine()
 {
@@ -13,11 +14,12 @@ AMagazine::AMagazine()
 
 	
 	Magazine = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Magazine"));
-	
+	GrabComponent = CreateDefaultSubobject<UGrabComponent>(TEXT("GrabComponent"));
 
 	if (SM_Magazine.Succeeded()) {
 	
 		Magazine->SetStaticMesh(SM_Magazine.Object);
+		GrabComponent->SetupAttachment(Magazine);
 		
 	}
 	

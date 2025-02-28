@@ -110,7 +110,7 @@ void ASquad_Pawn::Left_Release(const FInputActionValue& Value)
 void ASquad_Pawn::Left_Trigger(const FInputActionValue& Value)
 {
 
-	
+	Left_Hand->Trigger();
 }
 
 void ASquad_Pawn::Right_Grip(const FInputActionValue& Value)
@@ -127,12 +127,12 @@ void ASquad_Pawn::Right_Release(const FInputActionValue& Value)
 void ASquad_Pawn::Right_Trigger(const FInputActionValue& Value)
 {
 
-	
+	Right_Hand->Trigger();
 }
 
 void ASquad_Pawn::Move_Horizon(const FInputActionValue& Value)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Move Detected"));
+	
 
 	float value = Value.Get<float>();
 	if (Controller != nullptr)

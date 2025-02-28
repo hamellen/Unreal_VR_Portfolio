@@ -11,5 +11,6 @@ namespace SquadTags {
 
 	UE_DECLARE_GAMEPLAY_TAG_EXTERN(Vr_Hand_left);
 	UE_DECLARE_GAMEPLAY_TAG_EXTERN(Vr_Hand_right);
-
+	UE_DECLARE_GAMEPLAY_TAG_EXTERN(Vr_Object_ObjectToHand);
+	UE_DECLARE_GAMEPLAY_TAG_EXTERN(Vr_Object_HandToObject);
 }

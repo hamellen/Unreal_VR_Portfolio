@@ -49,7 +49,7 @@ AAK_Rifle::AAK_Rifle()
 		scope->SetupAttachment(main_part, scope_socket);
 	}
 
-	
+	//GrabComponent->grabtrigger.AddUFunction(this, FName("Weapon_Fire"));
 }
 
 void AAK_Rifle::BeginPlay()

@@ -24,8 +24,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = Collision)
 	TObjectPtr<class UBoxComponent> Magazine_box;
 
-	UPROPERTY(EditAnywhere, Category = Collision)
-	TObjectPtr<class UGrabComponent> GrabComponent;
+	
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

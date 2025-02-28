@@ -10,7 +10,7 @@
 class UMotionControllerComponent;
 class USkeletalMeshComponent;
 class UHand_instance;
-
+class UGrabComponent;
 UCLASS()
 class SQUAD_API ASquad_Hand : public AActor
 {
@@ -28,8 +28,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(EditAnywhere, Category = Hand)
-	TObjectPtr<USceneComponent> Base_Root;
+	
 
 
 	UPROPERTY(EditAnywhere,Category=Hand)
@@ -41,12 +40,25 @@ public:
 	UPROPERTY(EditAnywhere,Category=Tag)
 	FGameplayTag hand_tag = FGameplayTag::EmptyTag;
 
+	UPROPERTY(EditAnywhere, Category = Radius)
+	float secsing_rad;
+
 	void Grab();
 
 	void Release();
+
+	void Trigger();
 	
+	UPROPERTY(VisibleAnywhere,Category=HandAnim)
 	TObjectPtr<UHand_instance> hand_instance;
 	
+	UPROPERTY(VisibleAnywhere,Category=Grab)
+	TObjectPtr<UGrabComponent> GrabCom;
 
+	
+
+
+	
+	UGrabComponent* FindGrabComponent();
 	
 };

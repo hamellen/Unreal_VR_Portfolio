@@ -21,7 +21,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = Ammo)
 	int32 ammo;
 
-	
+	UPROPERTY(EditAnywhere, Category = Collision)
+	TObjectPtr<class UGrabComponent> GrabComponent;
 
 	
 protected:

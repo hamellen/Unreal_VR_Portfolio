@@ -2,7 +2,7 @@
 
 
 #include "GrabComponent.h"
-
+#include "../Player/Squad_Hand.h"
 // Sets default values for this component's properties
 UGrabComponent::UGrabComponent()
 {
@@ -31,4 +31,41 @@ void UGrabComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 
 	// ...
 }
+
+void UGrabComponent::SetPhysics(bool bPhysics)
+{
+	Cast<UPrimitiveComponent>(GetAttachParent())->SetSimulatePhysics(bPhysics);
+
+}
+
+void UGrabComponent::Bind(TObjectPtr<ASquad_Hand>  TargetHand)
+{
+	SetPhysics(false);
+	bheld = true;
+	OwingHand = TargetHand;
+
+	
+	GetOwner()->AttachToComponent(TargetHand->hand_mesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+}
+
+void UGrabComponent::UnBind()
+{
+	SetPhysics(true);
+	bheld = false;
+	OwingHand = nullptr;
+	GetOwner()->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+}
+
+void UGrabComponent::TryTrigger()
+{
+	if (bheld) {
+	
+		if (grabtrigger.IsBound()) {
+			grabtrigger.Broadcast();
+		}
+	}
+
+}
+
+
 
