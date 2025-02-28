@@ -37,17 +37,33 @@ public:
 	TObjectPtr<UStaticMeshComponent> scope;
 
 
-	UPROPERTY(EditAnywhere,Category= GUN)
+	UPROPERTY(EditAnywhere,Category= Ammo)
 	int32 current_ammo;
 
-	UPROPERTY(EditAnywhere, Category = GUN)
+	UPROPERTY(EditAnywhere, Category = Ammo)
 	int32 max_ammo;
 
+	UPROPERTY(EditAnywhere, Category = Damage)
+	float damage;
 
+	UPROPERTY(EditAnywhere)
+	FName grip_socket;
 
+	UPROPERTY(EditAnywhere)
+	FName magazine_socket;
+
+	UPROPERTY(EditAnywhere)
+	FName scope_socket;
+
+	UPROPERTY(EditAnywhere)
+	FName muzzle_socket;
+
+	
+
+	
 
 public:
 
-	virtual void Weapon_Fire() PURE_VIRTUAL(ARifle::Weapon_Fire, );
-
+	virtual void Weapon_Fire();
+	virtual void Reload_Ammo();
 };

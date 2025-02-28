@@ -25,3 +25,12 @@ void ARifle::Tick(float DeltaTime)
 
 }
 
+void ARifle::Weapon_Fire()
+{
+
+}
+
+void ARifle::Reload_Ammo()
+{
+}
+

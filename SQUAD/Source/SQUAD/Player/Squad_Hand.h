@@ -9,7 +9,7 @@
 
 class UMotionControllerComponent;
 class USkeletalMeshComponent;
-
+class UHand_instance;
 
 UCLASS()
 class SQUAD_API ASquad_Hand : public AActor
@@ -41,11 +41,12 @@ public:
 	UPROPERTY(EditAnywhere,Category=Tag)
 	FGameplayTag hand_tag = FGameplayTag::EmptyTag;
 
+	void Grab();
+
+	void Release();
 	
+	TObjectPtr<UHand_instance> hand_instance;
 	
-
-
-
 
 	
 };

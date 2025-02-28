@@ -5,17 +5,23 @@
 #include "Components/CapsuleComponent.h"
 #include "../Component/StatComponent.h"
 #include "Camera/CameraComponent.h"
-#include "GameFramework/PawnMovementComponent.h"
 #include "InputActionValue.h"
 #include "MotionControllerComponent.h"
 #include "EnhancedInputComponent.h"
 #include "Components/InputComponent.h"
 #include "Squad_Hand.h"
-
+#include "GameFramework/FloatingPawnMovement.h"
 
 // Sets default values
 ASquad_Pawn::ASquad_Pawn()
 {
+	static ConstructorHelpers::FClassFinder<ASquad_Hand>Hand_c(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_MySquad_Hand.BP_MySquad_Hand_C'"));
+	
+	if (Hand_c.Succeeded()) {
+	
+		hand_class = Hand_c.Class;
+	}
+
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
@@ -33,7 +39,7 @@ ASquad_Pawn::ASquad_Pawn()
 
 
 	Stat = CreateDefaultSubobject<UStatComponent>(TEXT("Stat"));
-	Pawn_Movement = CreateDefaultSubobject<UPawnMovementComponent>(TEXT("PawnMovement"));
+	Pawn_Movement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("PawnMovement"));
 }
 
 // Called when the game starts or when spawned
@@ -62,19 +68,25 @@ void ASquad_Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+
+
+
+
 	UEnhancedInputComponent* Input = Cast<UEnhancedInputComponent>(PlayerInputComponent);
 
 	if (Input != nullptr)
 	{
-		Input->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ASquad_Pawn::Move);
+		Input->BindAction(IA_Horizon, ETriggerEvent::Triggered, this, &ASquad_Pawn::Move_Horizon);
+		Input->BindAction(IA_Vertical, ETriggerEvent::Triggered, this, &ASquad_Pawn::Move_Vertical);
+
 		Input->BindAction(IA_Left_Grip, ETriggerEvent::Started, this, &ASquad_Pawn::Left_Grip);
+		Input->BindAction(IA_Left_Grip, ETriggerEvent::Completed, this, &ASquad_Pawn::Left_Release);
 		Input->BindAction(IA_Left_Trigger, ETriggerEvent::Started, this, &ASquad_Pawn::Left_Trigger);
-		Input->BindAction(IA_Right_Grip, ETriggerEvent::Triggered, this, &ASquad_Pawn::Right_Grip);
-		
-		Input->BindAction(IA_Right_Trigger, ETriggerEvent::Triggered, this, &ThisClass::Right_Trigger);
+
+		Input->BindAction(IA_Right_Grip, ETriggerEvent::Started, this, &ASquad_Pawn::Right_Grip);
+		Input->BindAction(IA_Right_Grip, ETriggerEvent::Completed, this, &ASquad_Pawn::Right_Release);
 		Input->BindAction(IA_Right_Trigger, ETriggerEvent::Started, this, &ThisClass::Right_Trigger);
-		Input->BindAction(IA_Right_Trigger, ETriggerEvent::Ongoing, this, &ThisClass::Right_Trigger);
-		Input->BindAction(IA_Right_Trigger, ETriggerEvent::Completed, this, &ThisClass::Right_Trigger);
+		
 
 
 		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Setup Complete"));
@@ -84,74 +96,94 @@ void ASquad_Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 void ASquad_Pawn::Left_Grip(const FInputActionValue& Value)
 {
+	
+	Left_Hand->Grab();
 
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Left_Grip"));
-	UE_LOG(LogTemp, Warning, TEXT("Left_Grip"));
+}
+
+void ASquad_Pawn::Left_Release(const FInputActionValue& Value)
+{
+	Left_Hand->Release();
 
 }
 
 void ASquad_Pawn::Left_Trigger(const FInputActionValue& Value)
 {
 
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Left_Trigger"));
-	UE_LOG(LogTemp, Warning, TEXT("Left_Trigger"));
+	
 }
 
 void ASquad_Pawn::Right_Grip(const FInputActionValue& Value)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Right_Grip"));
-	UE_LOG(LogTemp, Warning, TEXT("Right_Grip"));
+	Right_Hand->Grab();
+}
+
+void ASquad_Pawn::Right_Release(const FInputActionValue& Value)
+{
+	Right_Hand->Release();
+
 }
 
 void ASquad_Pawn::Right_Trigger(const FInputActionValue& Value)
 {
 
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Right_Trigger"));
-	UE_LOG(LogTemp, Warning, TEXT("Right_Trigger"));
+	
 }
 
-void ASquad_Pawn::Move(const FInputActionValue& Value)
+void ASquad_Pawn::Move_Horizon(const FInputActionValue& Value)
 {
-	FVector2D MovementVector = Value.Get<FVector2D>();
-
 	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Move Detected"));
 
+	float value = Value.Get<float>();
 	if (Controller != nullptr)
 	{
-		// find out which way is forward
-		const FRotator Rotation = Controller->GetControlRotation();
-		const FRotator YawRotation(0, Rotation.Yaw, 0);
-
-		// get forward vector
-		const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-
-		// get right vector 
-		const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-
 		
-
-		// add movement 
-		AddMovementInput(ForwardDirection, MovementVector.Y);
-
-		AddMovementInput(RightDirection, MovementVector.X);
+			// find out which way is forward
+			const FRotator Rotation = Camera->GetComponentRotation();
+			const FRotator YawRotation(0, Rotation.Yaw, 0);
+	
+			const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+		
+			AddMovementInput(RightDirection, value * Speed);
 	}
 
 }
 
+void ASquad_Pawn::Move_Vertical(const FInputActionValue& Value)
+{
+	float value = Value.Get<float>();
+	if (Controller != nullptr)
+	{
+		const FRotator Rotation = Camera->GetComponentRotation();
+		const FRotator YawRotation(0, Rotation.Yaw, 0);
+
+
+		const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+
+		AddMovementInput(ForwardDirection, value*Speed);
+
+		
+	}
+}
+
+
+
 void ASquad_Pawn::Spawn_Hands()
 {
+
+	
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.Owner = this;
 
 
-	Left_Hand = GetWorld()->SpawnActor<ASquad_Hand>(ASquad_Hand::StaticClass(), GetActorLocation(), FRotator(0, 0, 0), SpawnParams);
+	Left_Hand = GetWorld()->SpawnActor<ASquad_Hand>(hand_class, GetActorLocation(), FRotator(0, 0, 0), SpawnParams);
 	Left_Hand->AttachToComponent(Vr_Root, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
 	Left_Hand->hand_tag = FGameplayTag::RequestGameplayTag("VR.HAND.LEFT");
 	Left_Hand->hand_mesh->SetRelativeRotation(FRotator(0, 0, 90));
 	Left_Hand->hand_mesh->SetRelativeScale3D(FVector(1.0f, 1.0f, -1.0f));
 	Left_Hand->motioncontroller->SetTrackingMotionSource(FName("Left"));
 
-	Right_Hand = GetWorld()->SpawnActor<ASquad_Hand>(ASquad_Hand::StaticClass(), GetActorLocation(), FRotator(0, 0, 0), SpawnParams);
+	Right_Hand = GetWorld()->SpawnActor<ASquad_Hand>(hand_class, GetActorLocation(), FRotator(0, 0, 0), SpawnParams);
 	Right_Hand->AttachToComponent(Vr_Root, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
 	Right_Hand->hand_tag = FGameplayTag::RequestGameplayTag("VR.HAND.RIGHT");
 	Right_Hand->hand_mesh->SetRelativeRotation(FRotator(0, 0, 90));

@@ -12,7 +12,7 @@ class UCameraComponent;
 class UCapsuleComponent;
 class UStatComponent;
 struct FInputActionValue;
-class UPawnMovementComponent;
+class UFloatingPawnMovement;
 class ASquad_Hand;
 
 UCLASS()
@@ -36,7 +36,10 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UPROPERTY(EditAnywhere, Category = Input)
-	TObjectPtr<UInputAction> MoveAction;
+	TObjectPtr<UInputAction> IA_Horizon;
+
+	UPROPERTY(EditAnywhere, Category = Input)
+	TObjectPtr<UInputAction> IA_Vertical;
 
 	UPROPERTY(EditAnywhere, Category = Input)
 	TObjectPtr<UInputAction> IA_Left_Grip;
@@ -61,7 +64,7 @@ public:
 	TObjectPtr<UStatComponent> Stat;
 
 	UPROPERTY(EditAnywhere, Category = Move)
-	TObjectPtr<UPawnMovementComponent> Pawn_Movement;
+	TObjectPtr<UFloatingPawnMovement> Pawn_Movement;
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = Camera)
 	TObjectPtr<UCameraComponent> Camera;
@@ -84,11 +87,23 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category=Height)
 	float Desired_height;
 
+	UPROPERTY(EditAnywhere, Category = Speed)
+	float Speed;
+
+	UPROPERTY()
+	TSubclassOf<ASquad_Hand> hand_class;
+
+
 	void Left_Grip(const FInputActionValue& Value);
+	void Left_Release(const FInputActionValue& Value);
 	void Left_Trigger(const FInputActionValue& Value);
 	void Right_Grip(const FInputActionValue& Value);
+	void Right_Release(const FInputActionValue& Value);
 	void Right_Trigger(const FInputActionValue& Value);
-	void Move(const FInputActionValue& Value);
+
+
+	void Move_Horizon(const FInputActionValue& Value);
+	void Move_Vertical(const FInputActionValue& Value);
 
 	void Spawn_Hands();
 
