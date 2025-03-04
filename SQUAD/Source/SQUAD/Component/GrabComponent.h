@@ -7,9 +7,19 @@
 #include "GameplayTagContainer.h"
 #include "GrabComponent.generated.h"
 
+UENUM()
+enum class EGrabEnum :uint8
+{
+	ObjectToHand UMETA(DisplayName = "ObjectToHand"),
+	HandToObject UMETA(DisplayName = "HandToObject"),
+	Free UMETA(DisplayName = "Free")
+};
+
 DECLARE_MULTICAST_DELEGATE(GrabTrigger);
 
 class ASquad_Hand;
+
+
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SQUAD_API UGrabComponent : public USceneComponent
@@ -49,7 +59,12 @@ public:
 
 	GrabTrigger grabtrigger;
 
+	UPROPERTY(EditAnywhere)
+	EGrabEnum grab_type;
+
 
 	UPROPERTY(EditAnywhere,Category=bheld)
 	bool bheld;
+
+	FRotator InvertRotator(const FRotator& Rotator);
 };

@@ -8,6 +8,7 @@
 #include "../Component/GrabComponent.h"
 #include "../Weapon/Rifle.h"
 #include "DrawDebugHelpers.h"
+#include "../Weapon/Magazine.h"
 // Sets default values
 ASquad_Hand::ASquad_Hand()
 {
@@ -27,7 +28,8 @@ ASquad_Hand::ASquad_Hand()
 	if (HAND_MESH.Succeeded()) {
 		hand_mesh->SetSkeletalMesh(HAND_MESH.Object);
 	}
-
+	scene_object = CreateDefaultSubobject<USceneComponent>(TEXT("Scene"));
+	scene_object->SetupAttachment(hand_mesh);
 	
 }
 
@@ -55,12 +57,14 @@ void ASquad_Hand::Grab()
 		//바인딩 해체 작업
 		GrabCom->UnBind();
 		GrabCom = nullptr;
+		hand_instance->Pose_Index = 0;
 		return;
 	}
 
 	//Grab 없음
 	GrabCom = FindGrabComponent();// Grab 발견
 	if (GrabCom) {//바인딩 작업
+		hand_instance->Pose_Index = 50;
 		GrabCom->Bind(this);
 	}
 	else if (!GrabCom) {
@@ -113,6 +117,14 @@ class UGrabComponent* ASquad_Hand::FindGrabComponent()
 			return rifle->FindComponentByClass<UGrabComponent>();
 
 		}
+		TObjectPtr<AMagazine> magazine = Cast<AMagazine>(OverlapResults[0].GetActor());
+
+		if (magazine) {
+		
+			DrawDebugSphere(GetWorld(), motion_location, secsing_rad, 26, FColor::Green, false, 2, 0, 2);
+			return magazine->FindComponentByClass<UGrabComponent>();
+		}
+
 	}
 	
 

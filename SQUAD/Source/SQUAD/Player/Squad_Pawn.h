@@ -72,8 +72,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = VR)
 	TObjectPtr<USceneComponent> Vr_Root;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = VR)
-	TObjectPtr<USceneComponent> Base_Root;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Root)
+	TObjectPtr<USceneComponent> Base_Component;
 
 	
 

@@ -3,6 +3,8 @@
 
 #include "GrabComponent.h"
 #include "../Player/Squad_Hand.h"
+#include "MotionControllerComponent.h"
+#include "Kismet/KismetMathLibrary.h"
 // Sets default values for this component's properties
 UGrabComponent::UGrabComponent()
 {
@@ -40,12 +42,31 @@ void UGrabComponent::SetPhysics(bool bPhysics)
 
 void UGrabComponent::Bind(TObjectPtr<ASquad_Hand>  TargetHand)
 {
-	SetPhysics(false);
-	bheld = true;
-	OwingHand = TargetHand;
+
+	if (grab_type == EGrabEnum::Free) {
+		SetPhysics(false);
+		bheld = true;
+		OwingHand = TargetHand;
+		GetOwner()->AttachToComponent(TargetHand->hand_mesh->GetAttachParent(), FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+	}
+	else if (grab_type == EGrabEnum::ObjectToHand) {
+
+		
+		SetPhysics(false);
+		bheld = true;
+		OwingHand = TargetHand;
+		GetOwner()->AttachToComponent(TargetHand->scene_object, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+		
+		//FRotator newRotation = GetRelativeRotation().GetInverse();
+		//GetAttachParent()->SetRelativeRotation(newRotation, false, nullptr, ETeleportType::TeleportPhysics);
+
+		// Comp -> Parent
+		//FVector compToParentDirection = GetAttachParent()->GetComponentLocation() - GetComponentLocation();
+		//FVector newLocation = TargetHand->motioncontroller->GetComponentLocation() + compToParentDirection;
+		//GetAttachParent()->SetWorldLocation(newLocation, false, nullptr, ETeleportType::TeleportPhysics);
+	}
 
 	
-	GetOwner()->AttachToComponent(TargetHand->hand_mesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 }
 
 void UGrabComponent::UnBind()
@@ -65,6 +86,17 @@ void UGrabComponent::TryTrigger()
 		}
 	}
 
+}
+
+FRotator UGrabComponent::InvertRotator(const FRotator& Rotator)
+{
+	return FRotator(
+		-Rotator.Pitch,
+		-Rotator.Yaw,
+		-Rotator.Roll
+	);
+
+	
 }
 
 

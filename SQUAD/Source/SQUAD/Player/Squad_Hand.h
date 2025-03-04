@@ -31,11 +31,14 @@ public:
 	
 
 
-	UPROPERTY(EditAnywhere,Category=Hand)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category=Hand)
 	TObjectPtr<UMotionControllerComponent> motioncontroller;
 
 	UPROPERTY(EditAnywhere, Category = Hand)
 	TObjectPtr<USkeletalMeshComponent> hand_mesh;
+
+	UPROPERTY(EditAnywhere, Category = Scene)
+	TObjectPtr<USceneComponent> scene_object;
 
 	UPROPERTY(EditAnywhere,Category=Tag)
 	FGameplayTag hand_tag = FGameplayTag::EmptyTag;

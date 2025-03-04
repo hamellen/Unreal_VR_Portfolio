@@ -25,13 +25,13 @@ ASquad_Pawn::ASquad_Pawn()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
-	Base_Root= CreateDefaultSubobject<USceneComponent>(TEXT("Base"));
+	Base_Component=CreateDefaultSubobject<USceneComponent>(TEXT("Base_Root"));
 
 	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
-	CapsuleComponent->SetupAttachment(Base_Root);
+	CapsuleComponent->SetupAttachment(Base_Component);
 
 	Vr_Root = CreateDefaultSubobject<USceneComponent>(TEXT("Vr_Root"));
-	Vr_Root->SetupAttachment(Base_Root);
+	Vr_Root->SetupAttachment(Base_Component);
 
 	
 	Camera= CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));

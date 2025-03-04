@@ -7,8 +7,8 @@
 #include	<xdevapi.h>
 #include "SquadGameInstance.generated.h"
 
-
-
+class UNiagaraSystem;
+class USoundCue;
 /**
  * 
  */
@@ -17,6 +17,9 @@ class SQUAD_API USquadGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 	
+	virtual void Init() override;
+
+
 	mysqlx::Session* m_Session;
 	mysqlx::Schema* m_SchemaDB;
 
@@ -27,7 +30,7 @@ public:
 
 public:
 
-	virtual void Init() override;
+	
 
 	void ConnectToDataBase(const FString& host, int32 port, const FString& username, const FString& password, const FString& schema);
 
@@ -35,4 +38,10 @@ public:
 
 	void CloseDatabaseConnection();
 
+	
+	UPROPERTY(EditAnywhere, Category = SFX)
+	TMap<FString, TObjectPtr<USoundCue>>  Map_Cue;
+
+	UPROPERTY(EditAnywhere, Category = VFX)
+	TMap<FString, TObjectPtr<UNiagaraSystem>>  Map_Vfx;
 };

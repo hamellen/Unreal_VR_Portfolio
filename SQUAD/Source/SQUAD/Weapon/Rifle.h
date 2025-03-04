@@ -61,7 +61,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = Collision)
 	TObjectPtr<class UGrabComponent> GrabComponent;
 
-	
+	UPROPERTY(EditAnywhere, Category = Socket)
+	FVector gun_muzzle_location;
+
+	UPROPERTY(EditAnywhere, Category = Socket)
+	FRotator gun_muzzle_rotation;
 
 public:
 
