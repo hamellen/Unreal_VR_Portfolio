@@ -4,6 +4,7 @@
 #include "Magazine.h"
 #include "Components/BoxComponent.h"
 #include "../Component//GrabComponent.h"
+#include "../Player/Squad_Hand.h"
 // Sets default values
 AMagazine::AMagazine()
 {
@@ -14,7 +15,9 @@ AMagazine::AMagazine()
 
 	
 	Magazine = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Magazine"));
+	
 	GrabComponent = CreateDefaultSubobject<UGrabComponent>(TEXT("GrabComponent"));
+
 
 	if (SM_Magazine.Succeeded()) {
 	
@@ -42,5 +45,23 @@ void AMagazine::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void AMagazine::Magazine_Out()
+{
+	
+	GrabComponent->UnBind();
+	Magazine->SetCollisionProfileName(TEXT("SquadMagazine"));
+	SetLifeSpan(0.5f);
+}
+
+void AMagazine::Magazine_In()
+{
+	GrabComponent->OwingHand = nullptr;
+	GrabComponent->bheld = false;
+	auto hand = Cast<ASquad_Hand>(GetAttachParentActor());
+	if (hand) {
+		hand->GrabCom = nullptr;
+	}
 }
 

@@ -9,6 +9,7 @@
 
 class UNiagaraSystem;
 class USoundCue;
+class UAnimMontage;
 /**
  * 
  */
@@ -44,4 +45,7 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = VFX)
 	TMap<FString, TObjectPtr<UNiagaraSystem>>  Map_Vfx;
+
+	UPROPERTY(EditAnywhere, Category = Montage)
+	TMap<FString, TObjectPtr<UAnimMontage>>  Map_Montage;
 };

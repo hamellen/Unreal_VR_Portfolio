@@ -8,6 +8,10 @@
 
 class URifle_Animinstance;
 class USquadGameInstance;
+class UWidgetComponent;
+class UGun_Ammo;
+class UUserWidget;
+class ABullet;
 /**
  * 
  */
@@ -32,6 +36,13 @@ public:
 	UPROPERTY(EditAnywhere, Category = Animation)
 	TObjectPtr<class USquadGameInstance> Squad_Instance;
 
+	UPROPERTY(EditAnywhere, Category = Grip)
+	TObjectPtr<class UBoxComponent> GripBox;
+
+
+	UPROPERTY(EditAnywhere,Category=Magazine)
+	TObjectPtr<class AMagazine> Magazine_Object;
+
 
 	UPROPERTY(EditAnywhere, Category = Magazine_Vector)
 	FVector  Magazine_Position;
@@ -41,4 +52,37 @@ public:
 
 	virtual void Weapon_Fire();
 	virtual void Reload_Ammo();
+
+	UPROPERTY(EditAnywhere, Category = UMG)
+	TObjectPtr<UWidgetComponent> Widget_Ammo;
+
+	UPROPERTY(EditAnywhere, Category = UMG)
+	TSubclassOf<UUserWidget> Ammo_UMG_Class;
+
+	UPROPERTY(EditAnywhere,Category=UMG)
+	TObjectPtr<UGun_Ammo> Ammo_UMG;
+
+	UPROPERTY(EditAnywhere, Category = Bullet)
+	TSubclassOf<ABullet> BulletClass;
+
+	UPROPERTY(EditAnywhere, Category = Hand)
+	TObjectPtr<class ASquad_Hand> Vertical_Left;
+
+
+	
+
+
+	UFUNCTION()
+	void OnOverlapHandBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
+		bool bFromSweep, const FHitResult& SweepResult);
+
+	UFUNCTION()
+	void OnEndHandOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
+		bool bFromSweep, const FHitResult& SweepResult);
 };

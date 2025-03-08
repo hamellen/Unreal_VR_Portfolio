@@ -7,6 +7,7 @@
 #include "../Animation/Hand_instance.h"
 #include "../Component/GrabComponent.h"
 #include "../Weapon/Rifle.h"
+#include "Components/CapsuleComponent.h"
 #include "DrawDebugHelpers.h"
 #include "../Weapon/Magazine.h"
 // Sets default values
@@ -16,11 +17,12 @@ ASquad_Hand::ASquad_Hand()
 	PrimaryActorTick.bCanEverTick = false;
 
 	
-
+	Capsule_Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
 
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh>HAND_MESH(TEXT("SkeletalMesh'/Game/MaleHand/Mesh/FirstPersonHand.FirstPersonHand'"));
 	motioncontroller = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("MotionController"));
 	
+	motioncontroller->SetupAttachment(Capsule_Collision);
 
 	hand_mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Hand_Mesh"));
 	hand_mesh->SetupAttachment(motioncontroller);
@@ -42,6 +44,7 @@ void ASquad_Hand::BeginPlay()
 	if (!hand_instance) {
 		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("No hand instance"));
 	}
+	mesh_transform = hand_mesh->GetRelativeTransform();
 }
 
 // Called every frame
@@ -64,13 +67,16 @@ void ASquad_Hand::Grab()
 	//Grab 없음
 	GrabCom = FindGrabComponent();// Grab 발견
 	if (GrabCom) {//바인딩 작업
+
 		hand_instance->Pose_Index = 50;
 		GrabCom->Bind(this);
+		
 	}
 	else if (!GrabCom) {
 	
 		hand_instance->Pose_Index = -50;
 	}
+	
 }
 
 void ASquad_Hand::Release()
@@ -79,7 +85,7 @@ void ASquad_Hand::Release()
 		return;
 	}
 
-
+	//DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 	hand_instance->Pose_Index = 0;
 
 }
@@ -92,9 +98,17 @@ void ASquad_Hand::Trigger()
 	
 }
 
+void ASquad_Hand::ResetHandMesh()
+{
+	hand_mesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	hand_mesh->AttachToComponent(motioncontroller, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+	hand_mesh->SetRelativeTransform(mesh_transform,false,nullptr,ETeleportType::TeleportPhysics);
+	hand_instance->Pose_Index = 0;
+}
+
 class UGrabComponent* ASquad_Hand::FindGrabComponent()
 {
-	FVector motion_location = GetActorLocation();
+	FVector motion_location = motioncontroller->GetComponentLocation();
 
 	TArray<FOverlapResult> OverlapResults;
 	FCollisionQueryParams CollisionQueryParam(NAME_None, false, this);

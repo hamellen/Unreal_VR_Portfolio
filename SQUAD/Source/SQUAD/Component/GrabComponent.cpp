@@ -5,6 +5,7 @@
 #include "../Player/Squad_Hand.h"
 #include "MotionControllerComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "../Weapon/AK_Rifle.h"
 // Sets default values for this component's properties
 UGrabComponent::UGrabComponent()
 {
@@ -42,7 +43,6 @@ void UGrabComponent::SetPhysics(bool bPhysics)
 
 void UGrabComponent::Bind(TObjectPtr<ASquad_Hand>  TargetHand)
 {
-
 	if (grab_type == EGrabEnum::Free) {
 		SetPhysics(false);
 		bheld = true;
@@ -51,30 +51,36 @@ void UGrabComponent::Bind(TObjectPtr<ASquad_Hand>  TargetHand)
 	}
 	else if (grab_type == EGrabEnum::ObjectToHand) {
 
-		
+
 		SetPhysics(false);
 		bheld = true;
 		OwingHand = TargetHand;
 		GetOwner()->AttachToComponent(TargetHand->scene_object, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
-		
-		//FRotator newRotation = GetRelativeRotation().GetInverse();
-		//GetAttachParent()->SetRelativeRotation(newRotation, false, nullptr, ETeleportType::TeleportPhysics);
 
-		// Comp -> Parent
-		//FVector compToParentDirection = GetAttachParent()->GetComponentLocation() - GetComponentLocation();
-		//FVector newLocation = TargetHand->motioncontroller->GetComponentLocation() + compToParentDirection;
-		//GetAttachParent()->SetWorldLocation(newLocation, false, nullptr, ETeleportType::TeleportPhysics);
+
 	}
+	else if (grab_type == EGrabEnum::HandToObject) {
 
+
+
+	}
+	
 	
 }
 
 void UGrabComponent::UnBind()
 {
+	auto hand = Cast<ASquad_Hand>(GetOwner()->GetAttachParentActor());
+	if (hand) {
+		hand->GrabCom = nullptr;
+	}
+	
+	
 	SetPhysics(true);
 	bheld = false;
 	OwingHand = nullptr;
 	GetOwner()->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	
 }
 
 void UGrabComponent::TryTrigger()

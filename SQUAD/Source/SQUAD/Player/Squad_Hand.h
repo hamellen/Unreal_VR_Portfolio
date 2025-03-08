@@ -29,7 +29,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Collision)
+	TObjectPtr<class UCapsuleComponent> Capsule_Collision;
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category=Hand)
 	TObjectPtr<UMotionControllerComponent> motioncontroller;
@@ -51,6 +52,8 @@ public:
 	void Release();
 
 	void Trigger();
+
+	void ResetHandMesh();
 	
 	UPROPERTY(VisibleAnywhere,Category=HandAnim)
 	TObjectPtr<UHand_instance> hand_instance;
@@ -58,9 +61,10 @@ public:
 	UPROPERTY(VisibleAnywhere,Category=Grab)
 	TObjectPtr<UGrabComponent> GrabCom;
 
+	UPROPERTY(VisibleAnywhere, Category = HandAnim)
+	FTransform mesh_transform;
+
 	
-
-
 	
 	UGrabComponent* FindGrabComponent();
 	
