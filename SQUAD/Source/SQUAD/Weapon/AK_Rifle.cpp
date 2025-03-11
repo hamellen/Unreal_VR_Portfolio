@@ -26,6 +26,8 @@ AAK_Rifle::AAK_Rifle()
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>Grip(TEXT("/Script/Engine.StaticMesh'/Game/AnimatedLowPolyWeapons/Art/Weapons/_Common/Attachments/Models/SM_ATT_Grip_01.SM_ATT_Grip_01'"));
 	
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>Scope(TEXT("/Script/Engine.StaticMesh'/Game/AnimatedLowPolyWeapons/Art/Weapons/_Common/Attachments/Models/SM_ATT_Scope_02.SM_ATT_Scope_02'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>Muzzle(TEXT("/Script/Engine.StaticMesh'/Game/AnimatedLowPolyWeapons/Art/Weapons/_Common/Attachments/Models/SM_ATT_Muzzle_Silencer_01.SM_ATT_Muzzle_Silencer_01'"));
+
 
 	static ConstructorHelpers::FClassFinder<UUserWidget>Ammo_Class(TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/UMG/Gun_Ammo_Count.Gun_Ammo_Count_C'"));
 
@@ -89,15 +91,23 @@ AAK_Rifle::AAK_Rifle()
 		Widget_Ammo->SetWidgetSpace(EWidgetSpace::World);
 	}
 
+	muzzle = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Muzzle"));
+	if (Muzzle.Succeeded()) {
 	
+		muzzle->SetStaticMesh(Muzzle.Object);
+		muzzle->SetupAttachment(main_part, muzzle_socket);
+	}
 	
+	Muzzle_Fire = CreateDefaultSubobject<USceneComponent>(TEXT("Fire"));
+	Muzzle_Fire->SetupAttachment(main_part);
+
 }
 
 void AAK_Rifle::BeginPlay()
 {
 	Super::BeginPlay();
 	Gun_Animinstance = Cast<URifle_Animinstance>(main_part->GetAnimInstance());
-	current_ammo = max_ammo;
+	//current_ammo = max_ammo;
 	GrabComponent->grabtrigger.AddUObject(this, &AAK_Rifle::Weapon_Fire);
 	Squad_Instance = Cast<USquadGameInstance>(GetWorld()->GetGameInstance());
 	
@@ -122,8 +132,8 @@ void AAK_Rifle::Weapon_Fire()
 		
 		if (current_ammo > 0) {
 			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("Current Ammo : %d"),current_ammo));
-			gun_muzzle_location = main_part->GetSocketLocation(muzzle_socket);
-			gun_muzzle_rotation = main_part->GetSocketRotation(muzzle_socket);
+			gun_muzzle_location = Muzzle_Fire->GetComponentLocation();
+			gun_muzzle_rotation = Muzzle_Fire->GetComponentRotation();
 			UGameplayStatics::PlaySoundAtLocation(this, *Squad_Instance->Map_Cue.Find(TEXT("Gun_Fire")), gun_muzzle_location);//소리재생
 			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), *Squad_Instance->Map_Vfx.Find("Muzzle_Vfx"), gun_muzzle_location, gun_muzzle_rotation);
 			GetWorld()->SpawnActor<ABullet>(BulletClass, gun_muzzle_location, gun_muzzle_rotation);
@@ -198,9 +208,10 @@ void AAK_Rifle::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Othe
 
 	if (OtherActor->IsA(AMagazine::StaticClass())) {
 		
-		OtherActor->AttachToComponent(Magazine_box, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 		Magazine_Object = Cast<AMagazine>(OtherActor);
 		Magazine_Object->Magazine_In();
+		Magazine_Object->AttachToComponent(Magazine_box, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+		
 		Magazine_Object->Magazine->SetCollisionProfileName(TEXT("NoCollision"));
 		Reload_Ammo();
 	}

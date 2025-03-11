@@ -54,6 +54,11 @@ public:
 	void Trigger();
 
 	void ResetHandMesh();
+
+	UFUNCTION()
+	void OnGetTreasure(UPrimitiveComponent* HitComponent, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, FVector NormalImpulse,
+		const FHitResult& Hit);
 	
 	UPROPERTY(VisibleAnywhere,Category=HandAnim)
 	TObjectPtr<UHand_instance> hand_instance;
@@ -64,7 +69,8 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = HandAnim)
 	FTransform mesh_transform;
 
-	
+	UPROPERTY(VisibleAnywhere, Category = Player)
+	TObjectPtr<class ASquad_Pawn> Squad_Pawn_Object;
 	
 	UGrabComponent* FindGrabComponent();
 	

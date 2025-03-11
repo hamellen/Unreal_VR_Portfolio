@@ -43,6 +43,10 @@ public:
 	UPROPERTY(EditAnywhere,Category=Magazine)
 	TObjectPtr<class AMagazine> Magazine_Object;
 
+	UPROPERTY(EditAnywhere, Category = Fire)
+	TObjectPtr<class USceneComponent> Muzzle_Fire;
+
+
 
 	UPROPERTY(EditAnywhere, Category = Magazine_Vector)
 	FVector  Magazine_Position;

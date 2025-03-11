@@ -10,8 +10,8 @@ UCLASS()
 class SQUAD_API ACollectable : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ACollectable();
 
@@ -19,8 +19,19 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+
+
+	UPROPERTY(EditAnywhere, Category = Mesh)
+	TObjectPtr<class UStaticMeshComponent> Mesh;
+
+
+	UPROPERTY(EditAnywhere, Category = Mesh_Array)
+	TArray<TObjectPtr<UStaticMesh>> Mesh_Array;
+
+
 
 };

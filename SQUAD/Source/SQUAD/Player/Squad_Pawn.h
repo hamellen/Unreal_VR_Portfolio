@@ -14,7 +14,7 @@ class UStatComponent;
 struct FInputActionValue;
 class UFloatingPawnMovement;
 class ASquad_Hand;
-
+class UAIPerceptionStimuliSourceComponent;
 UCLASS()
 class SQUAD_API ASquad_Pawn : public APawn
 {
@@ -75,6 +75,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Root)
 	TObjectPtr<USceneComponent> Base_Component;
 
+	UPROPERTY(EditAnywhere, Category = Sensing)
+	TObjectPtr<UAIPerceptionStimuliSourceComponent> Sensing_Component;
 	
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Hand)
@@ -93,6 +95,12 @@ public:
 	UPROPERTY()
 	TSubclassOf<ASquad_Hand> hand_class;
 
+	UPROPERTY(EditAnywhere,Category=Goal)
+	int32 current_number_goal;
+
+	UPROPERTY(EditAnywhere, Category = Goal)
+	int32 max_number_goal;
+
 
 	void Left_Grip(const FInputActionValue& Value);
 	void Left_Release(const FInputActionValue& Value);
@@ -106,5 +114,8 @@ public:
 	void Move_Vertical(const FInputActionValue& Value);
 
 	void Spawn_Hands();
+
+
+
 
 };

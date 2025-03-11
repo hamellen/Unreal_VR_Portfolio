@@ -36,6 +36,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Mesh)
 	TObjectPtr<UStaticMeshComponent> scope;
 
+	UPROPERTY(EditAnywhere, Category = Mesh)
+	TObjectPtr<UStaticMeshComponent> muzzle;
+
 
 	UPROPERTY(EditAnywhere,Category= Ammo)
 	int32 current_ammo;

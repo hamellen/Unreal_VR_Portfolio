@@ -11,7 +11,7 @@
 #include "Components/InputComponent.h"
 #include "Squad_Hand.h"
 #include "GameFramework/FloatingPawnMovement.h"
-
+#include "Perception/AIPerceptionStimuliSourceComponent.h"
 // Sets default values
 ASquad_Pawn::ASquad_Pawn()
 {
@@ -40,6 +40,8 @@ ASquad_Pawn::ASquad_Pawn()
 
 	Stat = CreateDefaultSubobject<UStatComponent>(TEXT("Stat"));
 	Pawn_Movement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("PawnMovement"));
+	Sensing_Component = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("AI_Stimulate"));
+	Sensing_Component->RegisterWithPerceptionSystem();
 }
 
 // Called when the game starts or when spawned

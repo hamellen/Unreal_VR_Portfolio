@@ -10,6 +10,9 @@
 #include "Components/CapsuleComponent.h"
 #include "DrawDebugHelpers.h"
 #include "../Weapon/Magazine.h"
+#include "../Collectable.h"
+#include "../Player/Squad_Pawn.h"
+#include "Kismet/GameplayStatics.h"
 // Sets default values
 ASquad_Hand::ASquad_Hand()
 {
@@ -17,12 +20,12 @@ ASquad_Hand::ASquad_Hand()
 	PrimaryActorTick.bCanEverTick = false;
 
 	
-	Capsule_Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
+	
 
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh>HAND_MESH(TEXT("SkeletalMesh'/Game/MaleHand/Mesh/FirstPersonHand.FirstPersonHand'"));
 	motioncontroller = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("MotionController"));
-	
-	motioncontroller->SetupAttachment(Capsule_Collision);
+	Capsule_Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
+	Capsule_Collision->SetupAttachment(motioncontroller);
 
 	hand_mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Hand_Mesh"));
 	hand_mesh->SetupAttachment(motioncontroller);
@@ -45,6 +48,10 @@ void ASquad_Hand::BeginPlay()
 		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("No hand instance"));
 	}
 	mesh_transform = hand_mesh->GetRelativeTransform();
+
+
+	Squad_Pawn_Object = Cast<ASquad_Pawn>(GetWorld()->GetFirstPlayerController()->GetPawn());
+	Capsule_Collision->OnComponentHit.AddDynamic(this, &ASquad_Hand::OnGetTreasure);
 }
 
 // Called every frame
@@ -105,6 +112,22 @@ void ASquad_Hand::ResetHandMesh()
 	hand_mesh->SetRelativeTransform(mesh_transform,false,nullptr,ETeleportType::TeleportPhysics);
 	hand_instance->Pose_Index = 0;
 }
+
+void ASquad_Hand::OnGetTreasure(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+
+	if (OtherActor->IsA(ACollectable::StaticClass())) {
+	
+		Squad_Pawn_Object->current_number_goal++;
+		//UGameplayStatics::PlaySoundAtLocation(this, SoundCue, GetActorLocation());
+		OtherActor->Destroy();
+	}
+
+
+
+}
+
+
 
 class UGrabComponent* ASquad_Hand::FindGrabComponent()
 {

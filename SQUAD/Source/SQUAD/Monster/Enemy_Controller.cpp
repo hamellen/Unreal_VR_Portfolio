@@ -1,0 +1,46 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "Enemy_Controller.h"
+#include "Perception/AIPerceptionComponent.h"
+#include "Perception/AISenseConfig_Sight.h"
+
+AEnemy_Controller::AEnemy_Controller()
+{
+
+	AI_Perception = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AI_Perception"));
+	SetPerceptionComponent(*AI_Perception);
+
+	AI_Sight = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("AI_Sight"));
+
+	AI_Perception->ConfigureSense(*AI_Sight);
+
+	AI_Perception->SetDominantSense(AI_Sight->GetSenseImplementation());
+	//AI_Perception->OnTargetPerceptionUpdated.AddDynamic(this, &AEnemy_Controller::OnTargetPerceptionUpdated);
+}
+
+void AEnemy_Controller::OnPossess(APawn* InPawn)
+{
+	Super::OnPossess(InPawn);
+
+	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Enemy OnPossess"));
+
+
+}
+
+void AEnemy_Controller::BeginPlay()
+{
+	Super::BeginPlay();
+
+	if (AI_Perception)
+	{
+		AI_Perception->RegisterComponent();
+	}
+}
+
+void AEnemy_Controller::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
+{
+
+
+
+}
