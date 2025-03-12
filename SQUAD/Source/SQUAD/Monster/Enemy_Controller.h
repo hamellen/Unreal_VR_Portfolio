@@ -33,4 +33,7 @@ public:
 	UFUNCTION()
 	void OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus);
 
+	UPROPERTY(VisibleAnywhere, Category=Pawn)
+	TObjectPtr<class AEnemySoldier> soldier;
+
 };

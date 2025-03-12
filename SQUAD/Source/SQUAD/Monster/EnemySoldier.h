@@ -12,6 +12,9 @@ class UAISenseConfig_Sight;
 class AAK_Rifle;
 class ABullet;
 class USoldier_Animinstance;
+
+
+
 UCLASS()
 class SQUAD_API AEnemySoldier : public ACharacter
 {
@@ -38,8 +41,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = SKELETAL)
 	TArray<TObjectPtr<USkeletalMesh>> sk_array;
 
-	UPROPERTY(VisibleAnywhere, Category = Gun_Class)
-	TSubclassOf<ABullet> bullet_class;
+	UPROPERTY(VisibleAnywhere,Category=bullet)
+	TSubclassOf<class ABullet> bullet_class;
 
 	UPROPERTY(EditAnywhere, Category = Skeletal)
 	TObjectPtr<USkeletalMeshComponent> gun_mesh;
@@ -50,6 +53,11 @@ public:
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
+	void OnMontageEnded(UAnimMontage* Montage, bool bInterrupted);
 
 	void Fire();
+
+	UPROPERTY(EditAnywhere,Category=Ready)
+	bool ReadyToFire;
+	
 };

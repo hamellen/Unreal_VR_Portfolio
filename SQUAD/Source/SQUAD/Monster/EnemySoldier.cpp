@@ -7,14 +7,17 @@
 #include "Enemy_Controller.h"
 #include "../Weapon/Bullet.h"
 #include "../Animation/Soldier_Animinstance.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "../Animation/Soldier_Animinstance.h"
 #include "Components/CapsuleComponent.h"
+#include "Animation/AnimMontage.h"
 // Sets default values
 AEnemySoldier::AEnemySoldier()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	static ConstructorHelpers::FClassFinder<ABullet>bullet(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_Bullet.BP_Bullet_C'"));
+	static ConstructorHelpers::FClassFinder<ABullet>bullet(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_Bullet_Enemy.BP_Bullet_Enemy_C'"));
 
 	GetMesh()->SetRelativeLocationAndRotation(
 		FVector(0.f, 0.f, -88.f), FRotator(0.f, -90.f, 0.f)
@@ -47,6 +50,8 @@ void AEnemySoldier::BeginPlay()
 
 	GetCapsuleComponent()->OnComponentHit.AddDynamic(this, &AEnemySoldier::OnHit);
 
+
+	soldier_anim->OnMontageEnded.AddDynamic(this, &AEnemySoldier::OnMontageEnded);
 }
 
 // Called every frame
@@ -72,17 +77,31 @@ void AEnemySoldier::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPri
 		GetCapsuleComponent()->SetCollisionProfileName(TEXT("NoCollision"));
 	}
 
-	
+	 
 	//GetCharacterMovement()->DisableMovement();
+}
+
+void AEnemySoldier::OnMontageEnded(UAnimMontage* Montage, bool bInterrupted)
+{
+	if (bInterrupted)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("몽타주가 중단되었습니다!"));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("몽타주가 정상적으로 끝났습니다!"));
+		
+	}
+
 }
 
 void AEnemySoldier::Fire()
 {
-	FVector socket_location = gun_mesh->GetSocketLocation(TEXT("Weapon_Socket"));
-	FRotator socket_rotation = gun_mesh->GetSocketRotation(TEXT("Weapon_Socket"));
+	
 	soldier_anim->Fire();
 
-	GetWorld()->SpawnActor<ABullet>(bullet_class, socket_location, socket_rotation);
+	//soldier_anim->Montage_SetEndDelegate(FOnMontageEnded::CreateUObject(this, &AEnemySoldier::OnMontageEnded), soldier_anim->Fire_Montage);
+	
 }
 
 
