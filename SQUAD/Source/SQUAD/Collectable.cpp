@@ -24,6 +24,7 @@ void ACollectable::BeginPlay()
 
 	Mesh->SetStaticMesh(Mesh_Array[index]);
 	Mesh->SetCollisionProfileName(TEXT("Collectable"));
+	Mesh->SetSimulatePhysics(true);
 }
 
 // Called every frame
@@ -32,4 +33,15 @@ void ACollectable::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
+
+void ACollectable::NotifyHit(UPrimitiveComponent* MyComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+	Super::NotifyHit(MyComp, OtherActor, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
+
+	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Get Treasure"));
+
+
+}
+
+
 

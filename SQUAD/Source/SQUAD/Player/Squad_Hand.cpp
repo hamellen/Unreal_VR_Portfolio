@@ -24,6 +24,7 @@ ASquad_Hand::ASquad_Hand()
 
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh>HAND_MESH(TEXT("SkeletalMesh'/Game/MaleHand/Mesh/FirstPersonHand.FirstPersonHand'"));
 	motioncontroller = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("MotionController"));
+	
 	Capsule_Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
 	Capsule_Collision->SetupAttachment(motioncontroller);
 
@@ -42,7 +43,7 @@ ASquad_Hand::ASquad_Hand()
 void ASquad_Hand::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	//motioncontroller->SetSimulatePhysics(true);
 	hand_instance= Cast<UHand_instance>(hand_mesh->GetAnimInstance());
 	if (!hand_instance) {
 		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("No hand instance"));
@@ -51,7 +52,7 @@ void ASquad_Hand::BeginPlay()
 
 
 	Squad_Pawn_Object = Cast<ASquad_Pawn>(GetWorld()->GetFirstPlayerController()->GetPawn());
-	Capsule_Collision->OnComponentHit.AddDynamic(this, &ASquad_Hand::OnGetTreasure);
+	//hand_mesh->OnComponentHit.AddDynamic(this, &ASquad_Hand::OnGetTreasure);
 }
 
 // Called every frame
@@ -115,9 +116,11 @@ void ASquad_Hand::ResetHandMesh()
 
 void ASquad_Hand::OnGetTreasure(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-
-	if (OtherActor->IsA(ACollectable::StaticClass())) {
+	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Treasure Get"));
+	if (Hit.GetActor()->IsA(ACollectable::StaticClass())) {
 	
+		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Treasure Get"));
+
 		Squad_Pawn_Object->current_number_goal++;
 		//UGameplayStatics::PlaySoundAtLocation(this, SoundCue, GetActorLocation());
 		OtherActor->Destroy();

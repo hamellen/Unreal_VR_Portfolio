@@ -13,7 +13,7 @@ class AAK_Rifle;
 class ABullet;
 class USoldier_Animinstance;
 
-
+DECLARE_MULTICAST_DELEGATE(FDele_Multi);
 
 UCLASS()
 class SQUAD_API AEnemySoldier : public ACharacter
@@ -50,6 +50,9 @@ public:
 	UPROPERTY(VisibleAnywhere,Category=Anim)
 	TObjectPtr<USoldier_Animinstance> soldier_anim;
 
+	UPROPERTY(VisibleAnywhere, Category = GameMode)
+	TObjectPtr<class ASquad_GameMode> GameMode_Squad;
+
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
@@ -60,4 +63,6 @@ public:
 	UPROPERTY(EditAnywhere,Category=Ready)
 	bool ReadyToFire;
 	
+	
+
 };

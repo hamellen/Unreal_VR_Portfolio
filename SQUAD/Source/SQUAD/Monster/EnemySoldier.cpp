@@ -11,6 +11,7 @@
 #include "../Animation/Soldier_Animinstance.h"
 #include "Components/CapsuleComponent.h"
 #include "Animation/AnimMontage.h"
+#include "../Util/Squad_GameMode.h"
 // Sets default values
 AEnemySoldier::AEnemySoldier()
 {
@@ -52,6 +53,7 @@ void AEnemySoldier::BeginPlay()
 
 
 	soldier_anim->OnMontageEnded.AddDynamic(this, &AEnemySoldier::OnMontageEnded);
+	GameMode_Squad= Cast<ASquad_GameMode>(GetWorld()->GetAuthGameMode());
 }
 
 // Called every frame
@@ -76,8 +78,8 @@ void AEnemySoldier::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPri
 		GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
 		GetCapsuleComponent()->SetCollisionProfileName(TEXT("NoCollision"));
 	}
-
-	 
+	GameMode_Squad->DecreaseSoldier();
+	
 	//GetCharacterMovement()->DisableMovement();
 }
 

@@ -32,6 +32,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = Mesh_Array)
 	TArray<TObjectPtr<UStaticMesh>> Mesh_Array;
 
-
+	void NotifyHit(UPrimitiveComponent* MyComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit);
 
 };
