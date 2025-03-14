@@ -20,6 +20,7 @@
 #include "Bullet.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "../Animation/Hand_instance.h"
+#include "Components/SpotLightComponent.h"
 AAK_Rifle::AAK_Rifle()
 {
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh>Main_Sk(TEXT("/Script/Engine.SkeletalMesh'/Game/AnimatedLowPolyWeapons/Art/Weapons/ARs/SK_AR_01.SK_AR_01'"));
@@ -27,7 +28,7 @@ AAK_Rifle::AAK_Rifle()
 	
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>Scope(TEXT("/Script/Engine.StaticMesh'/Game/AnimatedLowPolyWeapons/Art/Weapons/_Common/Attachments/Models/SM_ATT_Scope_02.SM_ATT_Scope_02'"));
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>Muzzle(TEXT("/Script/Engine.StaticMesh'/Game/AnimatedLowPolyWeapons/Art/Weapons/_Common/Attachments/Models/SM_ATT_Muzzle_Silencer_01.SM_ATT_Muzzle_Silencer_01'"));
-
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>Flash(TEXT("/Script/Engine.StaticMesh'/Game/Private_Asset/FlashLight/source/flashlight.flashlight'"));
 
 	static ConstructorHelpers::FClassFinder<UUserWidget>Ammo_Class(TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/UMG/Gun_Ammo_Count.Gun_Ammo_Count_C'"));
 
@@ -42,6 +43,8 @@ AAK_Rifle::AAK_Rifle()
 
 	GrabComponent = CreateDefaultSubobject<UGrabComponent>(TEXT("GrabComponent"));
 	main_part = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Gun_Main"));
+	FlashLight = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("FlashLigtht"));
+	Light= CreateDefaultSubobject<USpotLightComponent>(TEXT("Light"));
 	Magazine_box = CreateDefaultSubobject<UBoxComponent>(TEXT("Magazine_Collision"));
 	GripBox= CreateDefaultSubobject<UBoxComponent>(TEXT("Grip_Collision"));
 
@@ -64,7 +67,12 @@ AAK_Rifle::AAK_Rifle()
 		main_part->SetSkeletalMesh(Main_Sk.Object);
 		
 	}
-	
+
+	if (Flash.Succeeded()) {
+		FlashLight->SetStaticMesh(Flash.Object);
+		FlashLight->SetupAttachment(main_part);
+		Light->SetupAttachment(main_part);
+	}
 
 	grip = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Grip"));
 	if (Grip.Succeeded()) {

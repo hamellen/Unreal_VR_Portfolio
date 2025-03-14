@@ -15,6 +15,7 @@ struct FInputActionValue;
 class UFloatingPawnMovement;
 class ASquad_Hand;
 class UAIPerceptionStimuliSourceComponent;
+class ASimulation_Actor;
 UCLASS()
 class SQUAD_API ASquad_Pawn : public APawn
 {
@@ -53,7 +54,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = Input)
 	TObjectPtr<UInputAction> IA_Right_Trigger;
 
-
+	UPROPERTY(EditAnywhere, Category = Input)
+	TObjectPtr<UInputAction> IA_Menu;
 
 
 
@@ -95,6 +97,12 @@ public:
 	UPROPERTY()
 	TSubclassOf<ASquad_Hand> hand_class;
 
+	UPROPERTY()
+	TSubclassOf<ASimulation_Actor> Menu_class;
+
+	UPROPERTY()
+	TObjectPtr<ASimulation_Actor> Menu_Object;
+
 	UPROPERTY(EditAnywhere,Category=Goal)
 	int32 current_number_goal;
 
@@ -115,7 +123,7 @@ public:
 
 	void Spawn_Hands();
 
-
+	void Spawn_Menu(const FInputActionValue& Value);
 
 
 };

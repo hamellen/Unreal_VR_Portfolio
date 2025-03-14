@@ -40,4 +40,6 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Projectile)
 	TObjectPtr<UProjectileMovementComponent> Projectile;
 
+	void NotifyHit(UPrimitiveComponent* MyComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit);
+
 };

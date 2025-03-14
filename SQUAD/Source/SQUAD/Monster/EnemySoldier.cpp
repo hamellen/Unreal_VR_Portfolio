@@ -6,12 +6,17 @@
 #include "../Weapon/AK_Rifle.h"
 #include "Enemy_Controller.h"
 #include "../Weapon/Bullet.h"
-#include "../Animation/Soldier_Animinstance.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "../Animation/Soldier_Animinstance.h"
 #include "Components/CapsuleComponent.h"
 #include "Animation/AnimMontage.h"
 #include "../Util/Squad_GameMode.h"
+#include "Kismet/GameplayStatics.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
+#include "../Util/SquadGameInstance.h"
+#include "Enemy_Controller.h"
+#include "Sound/SoundCue.h"
 // Sets default values
 AEnemySoldier::AEnemySoldier()
 {
@@ -54,6 +59,8 @@ void AEnemySoldier::BeginPlay()
 
 	soldier_anim->OnMontageEnded.AddDynamic(this, &AEnemySoldier::OnMontageEnded);
 	GameMode_Squad= Cast<ASquad_GameMode>(GetWorld()->GetAuthGameMode());
+
+	Squad_Instance = Cast<USquadGameInstance>(GetWorld()->GetGameInstance());
 }
 
 // Called every frame
@@ -77,10 +84,12 @@ void AEnemySoldier::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPri
 		GetMesh()->SetSimulatePhysics(true);
 		GetMesh()->SetCollisionProfileName(TEXT("Ragdoll"));
 		GetCapsuleComponent()->SetCollisionProfileName(TEXT("NoCollision"));
+		auto ai_con = Cast<AEnemy_Controller>(GetController());
+		ai_con->UnPossess();
+		ai_con->Destroy();
 	}
-	GameMode_Squad->DecreaseSoldier();
 	
-	//GetCharacterMovement()->DisableMovement();
+	
 }
 
 void AEnemySoldier::OnMontageEnded(UAnimMontage* Montage, bool bInterrupted)
@@ -101,6 +110,8 @@ void AEnemySoldier::Fire()
 {
 	
 	soldier_anim->Fire();
+	UGameplayStatics::PlaySoundAtLocation(this, *Squad_Instance->Map_Cue.Find(TEXT("Gun_Fire")), gun_mesh->GetComponentLocation());//소리재생
+	UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), *Squad_Instance->Map_Vfx.Find("Muzzle_Vfx"), gun_mesh->GetComponentLocation(), gun_mesh->GetComponentRotation());
 
 	//soldier_anim->Montage_SetEndDelegate(FOnMontageEnded::CreateUObject(this, &AEnemySoldier::OnMontageEnded), soldier_anim->Fire_Montage);
 	

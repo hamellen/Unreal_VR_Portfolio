@@ -50,3 +50,9 @@ void ABullet::Tick(float DeltaTime)
 
 }
 
+void ABullet::NotifyHit(UPrimitiveComponent* MyComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+
+	Destroy();
+}
+

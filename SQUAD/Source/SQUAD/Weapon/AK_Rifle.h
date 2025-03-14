@@ -12,6 +12,7 @@ class UWidgetComponent;
 class UGun_Ammo;
 class UUserWidget;
 class ABullet;
+class USpotLightComponent;
 /**
  * 
  */
@@ -46,7 +47,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = Fire)
 	TObjectPtr<class USceneComponent> Muzzle_Fire;
 
+	UPROPERTY(EditAnywhere, Category = FlashLight)
+	TObjectPtr<UStaticMeshComponent> FlashLight;
 
+	UPROPERTY(EditAnywhere, Category = Light)
+	TObjectPtr<USpotLightComponent> Light;
 
 	UPROPERTY(EditAnywhere, Category = Magazine_Vector)
 	FVector  Magazine_Position;

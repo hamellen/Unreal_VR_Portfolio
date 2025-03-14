@@ -7,7 +7,7 @@
 #include "Squad_GameMode.generated.h"
 
 DECLARE_MULTICAST_DELEGATE(FDele_Multi);
-
+DECLARE_MULTICAST_DELEGATE(FDele_Treasure);
 class UAudioComponent;
 /**
  * 
@@ -23,15 +23,24 @@ public:
 
 	virtual void BeginPlay() override;
 
-	void DecreaseSoldier();
+	
 
-	UPROPERTY(EditAnywhere,Category=Count)
-	int32 count_soldier;
+	void Left_Treasure();
+
+	
 
 	UPROPERTY(EditAnywhere, Category = Count)
-	int32 max_count_soldier;
-
+	int32 count_Treasure;
 	
 	FDele_Multi Fuc_DeleMulti;
+
+	FDele_Treasure Fuc_Treasure;
 	
+	UPROPERTY(VisibleAnywhere,Category=Class_Soldier)
+	TSubclassOf<class AEnemySoldier> class_soldier;
+
+	UPROPERTY(VisibleAnywhere,Category=TARGET)
+	TArray<AActor*> Target;
+
+	void SpawnSoldier();
 };

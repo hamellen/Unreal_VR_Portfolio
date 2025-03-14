@@ -45,6 +45,7 @@ void AEnemy_Controller::BeginPlay()
 
 void AEnemy_Controller::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
 {
+	soldier = Cast<AEnemySoldier>(GetPawn());
 
 	if (Actor->IsA(ASquad_Pawn::StaticClass()))  // 특정 액터만 감지
 	{

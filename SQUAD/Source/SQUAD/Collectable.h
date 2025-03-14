@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "Collectable.generated.h"
 
+class ASquad_GameMode;
+
 UCLASS()
 class SQUAD_API ACollectable : public AActor
 {
@@ -31,6 +33,10 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Mesh_Array)
 	TArray<TObjectPtr<UStaticMesh>> Mesh_Array;
+
+	UPROPERTY(VisibleAnywhere, Category = GameMode)
+	TObjectPtr<ASquad_GameMode> Squad_Game_Object;
+
 
 	void NotifyHit(UPrimitiveComponent* MyComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit);
 

@@ -63,6 +63,7 @@ public:
 	UPROPERTY(EditAnywhere,Category=Ready)
 	bool ReadyToFire;
 	
-	
+	UPROPERTY(EditAnywhere, Category = Animation)
+	TObjectPtr<class USquadGameInstance> Squad_Instance;
 
 };

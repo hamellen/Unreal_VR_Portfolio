@@ -12,14 +12,21 @@
 #include "Squad_Hand.h"
 #include "GameFramework/FloatingPawnMovement.h"
 #include "Perception/AIPerceptionStimuliSourceComponent.h"
+#include "../UMG/Simulation_Actor.h"
 // Sets default values
 ASquad_Pawn::ASquad_Pawn()
 {
 	static ConstructorHelpers::FClassFinder<ASquad_Hand>Hand_c(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_MySquad_Hand.BP_MySquad_Hand_C'"));
 	
+	static ConstructorHelpers::FClassFinder<ASimulation_Actor>Menu_c(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_Simulation_Actor.BP_Simulation_Actor_C'"));
+
 	if (Hand_c.Succeeded()) {
 	
 		hand_class = Hand_c.Class;
+	}
+
+	if (Menu_c.Succeeded()) {
+		Menu_class = Menu_c.Class;
 	}
 
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -89,7 +96,7 @@ void ASquad_Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 		Input->BindAction(IA_Right_Grip, ETriggerEvent::Completed, this, &ASquad_Pawn::Right_Release);
 		Input->BindAction(IA_Right_Trigger, ETriggerEvent::Started, this, &ThisClass::Right_Trigger);
 		
-
+		Input->BindAction(IA_Menu, ETriggerEvent::Started, this, &ThisClass::Spawn_Menu);
 
 		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Setup Complete"));
 	}
@@ -191,5 +198,19 @@ void ASquad_Pawn::Spawn_Hands()
 	Right_Hand->hand_mesh->SetRelativeRotation(FRotator(0, 0, 90));
 	Right_Hand->motioncontroller->SetTrackingMotionSource(FName("Right"));
 
+}
+
+void ASquad_Pawn::Spawn_Menu(const FInputActionValue& Value)
+{
+	if (!Menu_Object) {
+	
+		Menu_Object = GetWorld()->SpawnActor<ASimulation_Actor>(Menu_class, Camera->GetComponentLocation(), Camera->GetComponentRotation());
+	}
+	else if (Menu_Object) {
+	
+		Menu_Object->Destroy();
+		Menu_Object = nullptr;
+	}
+	
 }
 

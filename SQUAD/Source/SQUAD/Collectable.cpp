@@ -3,6 +3,8 @@
 
 #include "Collectable.h"
 #include "Components/SphereComponent.h"
+#include "Player/Squad_Hand.h"
+#include "Util/Squad_GameMode.h"
 // Sets default values
 ACollectable::ACollectable()
 {
@@ -25,6 +27,8 @@ void ACollectable::BeginPlay()
 	Mesh->SetStaticMesh(Mesh_Array[index]);
 	Mesh->SetCollisionProfileName(TEXT("Collectable"));
 	Mesh->SetSimulatePhysics(true);
+
+	Squad_Game_Object = Cast<ASquad_GameMode>(GetWorld()->GetAuthGameMode());
 }
 
 // Called every frame
@@ -38,7 +42,13 @@ void ACollectable::NotifyHit(UPrimitiveComponent* MyComp, AActor* OtherActor, UP
 {
 	Super::NotifyHit(MyComp, OtherActor, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
 
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Get Treasure"));
+
+	if (OtherActor->IsA(ASquad_Hand::StaticClass())) {
+	
+		Squad_Game_Object->Left_Treasure();
+		Destroy();
+	}
+	
 
 
 }
