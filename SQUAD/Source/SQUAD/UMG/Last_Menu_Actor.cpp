@@ -1,9 +1,9 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
+// Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Simulation_Actor.h"
+#include "Last_Menu_Actor.h"
 #include "Components/WidgetComponent.h"
-#include "Situation_Bar.h"
+#include "Last_Menu.h"
 #include "NiagaraComponent.h"
 #include "NiagaraFunctionLibrary.h"
 #include "EnhancedInputSubsystems.h"
@@ -14,48 +14,51 @@
 #include "Kismet/GameplayStatics.h"
 #include "Camera/PlayerCameraManager.h"
 #include "Kismet/KismetMathLibrary.h"
-
 // Sets default values
-ASimulation_Actor::ASimulation_Actor()
+ALast_Menu_Actor::ALast_Menu_Actor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	static ConstructorHelpers::FClassFinder<UUserWidget>Cl_Simul(TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/UMG/Simulatin_Bar.Simulatin_Bar_C'"));
+	static ConstructorHelpers::FClassFinder<UUserWidget>Cl_Last (TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/UMG/Last_Menu.Last_Menu_C'"));
 
-	Simul_Component = CreateDefaultSubobject<UWidgetComponent>(TEXT("Widget_Component"));
+	Last_Component = CreateDefaultSubobject<UWidgetComponent>(TEXT("Widget_Component"));
 
-	if (Cl_Simul.Succeeded()) {
-	
-		Cl_Simulation = Cl_Simul.Class;
-		Simul_Component->SetWidgetClass(Cl_Simulation);
-		Simul_Component->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-		Simul_Component->SetWidgetSpace(EWidgetSpace::World);
-		Simul_Component->SetDrawSize(FVector2D(200.f, 200.f));
+	if (Cl_Last.Succeeded()) {
+
+		Cl_Last_Menu = Cl_Last.Class;
+		Last_Component->SetWidgetClass(Cl_Last_Menu);
+		Last_Component->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		Last_Component->SetWidgetSpace(EWidgetSpace::World);
+		Last_Component->SetDrawSize(FVector2D(200.f, 200.f));
 	}
 
-	UI_Ray= CreateDefaultSubobject<UNiagaraComponent>(TEXT("Niagara_Component"));
+	UI_Ray = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Niagara_Component"));
+
 }
 
 // Called when the game starts or when spawned
-void ASimulation_Actor::BeginPlay()
+void ALast_Menu_Actor::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	Simul_Object = Cast<USituation_Bar>(Simul_Component->GetWidget());
+	CameraManager = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
+	SetWidgetInteractionComponent();
 
-	Simul_Object->SetTextLeftTreasure();
+	Last_Object = Cast<ULast_Menu>(Last_Component->GetWidget());
+
+	//Last_Object->Set_Text_Last_Time();
+
+
 
 	
-
-	CameraManager=UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
-	SetWidgetInteractionComponent();
 }
 
 // Called every frame
-void ASimulation_Actor::Tick(float DeltaTime)
+void ALast_Menu_Actor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 
 	FVector Camera_Location = CameraManager->GetCameraLocation();
 	FRotator Camera_Rotation = CameraManager->GetCameraRotation();
@@ -67,36 +70,29 @@ void ASimulation_Actor::Tick(float DeltaTime)
 	SetActorLocation(Camera_Location + index_foward * ForwardDirection + index_up * UpDirection);
 
 	SetActorRotation(UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), Camera_Location));
-
-	
 }
 
-void ASimulation_Actor::SetWidgetInteractionComponent()
+void ALast_Menu_Actor::SetWidgetInteractionComponent()
 {
-	//auto GameMode = Cast<ASquad_GameMode>(GetWorld()->GetAuthGameMode());
 	auto pawn = Cast<ASquad_Pawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
 
 	if (pawn) {
-	
+
 		WidgetInteraction = pawn->Right_Hand->WidgetInteraction;
 	}
 	else if (!pawn) {
-	
+
 		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("No Pawn"));
 	}
 
+
+}
+
+void ALast_Menu_Actor::Last_Time_Text()
+{
 	
 
 }
 
-void ASimulation_Actor::CloseMenu()
-{
-	if (auto* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetWorld()->GetFirstLocalPlayerFromController()))
-	{
-		Subsystem->RemoveMappingContext(Menu_Mapping);
-		Destroy();
-	}
 
-
-}
 

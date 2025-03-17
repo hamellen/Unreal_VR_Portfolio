@@ -71,6 +71,13 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = Player)
 	TObjectPtr<class ASquad_Pawn> Squad_Pawn_Object;
+
+
+	UPROPERTY(EditAnywhere, Category = Laser)
+	TObjectPtr<USceneComponent> Laser;
+
+	UPROPERTY(VisibleAnywhere, Category = "Widget")
+	TObjectPtr<class UWidgetInteractionComponent> WidgetInteraction;
 	
 	UGrabComponent* FindGrabComponent();
 	

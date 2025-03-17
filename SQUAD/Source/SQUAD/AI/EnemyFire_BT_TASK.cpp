@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "EnemyFire_BT_TASK.h"
@@ -31,7 +31,7 @@ EBTNodeResult::Type UEnemyFire_BT_TASK::ExecuteTask(UBehaviorTreeComponent& Owne
 	
 	FOnMontageEnded EndDelegate;
 	EndDelegate.BindUObject(this, &UEnemyFire_BT_TASK::OnMontageEnded, &OwnerComp);
-	pawn->soldier_anim->Montage_SetEndDelegate(EndDelegate, pawn->soldier_anim->Fire_Montage);
+	pawn->soldier_anim->Montage_SetEndDelegate(EndDelegate, pawn->soldier_anim->Fire_Montage);//적 몽타지 종료시까지의 델리게이트 설정
 
 	return EBTNodeResult::InProgress;  
 	

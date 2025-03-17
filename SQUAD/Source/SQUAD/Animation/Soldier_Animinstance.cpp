@@ -31,14 +31,14 @@ void USoldier_Animinstance::AnimNotify_bullet_fire()
 	FVector socket_location =enemy-> gun_mesh->GetSocketLocation(TEXT("Socket_Muzzle"));
 	FRotator socket_rotation = enemy->GetActorRotation();
 
-	GetWorld()->SpawnActor<ABullet>(enemy->bullet_class, socket_location, socket_rotation);
+	GetWorld()->SpawnActor<ABullet>(enemy->bullet_class, socket_location, socket_rotation);//醚舅 积己
 
 }
 
 void USoldier_Animinstance::Fire()
 {
 
-	Montage_Play(Fire_Montage);
+	Montage_Play(Fire_Montage);//根鸥瘤 犁积
 
 
 }

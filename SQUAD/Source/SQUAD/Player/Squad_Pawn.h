@@ -7,6 +7,8 @@
 
 #include "Squad_Pawn.generated.h"
 
+DECLARE_MULTICAST_DELEGATE(FDele_Multi);
+
 class UInputAction;
 class UCameraComponent;
 class UCapsuleComponent;
@@ -16,6 +18,9 @@ class UFloatingPawnMovement;
 class ASquad_Hand;
 class UAIPerceptionStimuliSourceComponent;
 class ASimulation_Actor;
+class APlayerStat_Actor;
+class UWidgetComponent;
+class ALast_Menu_Actor;
 UCLASS()
 class SQUAD_API ASquad_Pawn : public APawn
 {
@@ -100,8 +105,17 @@ public:
 	UPROPERTY()
 	TSubclassOf<ASimulation_Actor> Menu_class;
 
+	
+
 	UPROPERTY()
 	TObjectPtr<ASimulation_Actor> Menu_Object;
+
+	UPROPERTY(VisibleAnywhere,Category=Class_PlayerStat)
+	TSubclassOf<APlayerStat_Actor> class_stat;
+
+	UPROPERTY(VisibleAnywhere, Category = PlayerStat)
+	TObjectPtr< APlayerStat_Actor> PlayerStat_actor;
+
 
 	UPROPERTY(EditAnywhere,Category=Goal)
 	int32 current_number_goal;
@@ -109,6 +123,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = Goal)
 	int32 max_number_goal;
 
+	UPROPERTY()
+	TSubclassOf<ALast_Menu_Actor> Last_class;
 
 	void Left_Grip(const FInputActionValue& Value);
 	void Left_Release(const FInputActionValue& Value);
@@ -125,5 +141,11 @@ public:
 
 	void Spawn_Menu(const FInputActionValue& Value);
 
+	UPROPERTY(VisibleAnywhere,Category=GameMode)
+	TObjectPtr<class ASquad_GameMode> game_mode;
 
+	void Spawn_Last_Menu();
+
+
+	FDele_Multi Fuc_DeleMulti;//bullet hited
 };

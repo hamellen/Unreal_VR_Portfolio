@@ -13,12 +13,20 @@
 #include "GameFramework/FloatingPawnMovement.h"
 #include "Perception/AIPerceptionStimuliSourceComponent.h"
 #include "../UMG/Simulation_Actor.h"
+#include "../Util/Squad_GameMode.h"
+#include "../UMG/Situation_Bar.h"
+#include"../UMG/PlayerStat_Actor.h"
+#include "../UMG/Last_Menu_Actor.h"
 // Sets default values
 ASquad_Pawn::ASquad_Pawn()
 {
 	static ConstructorHelpers::FClassFinder<ASquad_Hand>Hand_c(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_MySquad_Hand.BP_MySquad_Hand_C'"));
 	
 	static ConstructorHelpers::FClassFinder<ASimulation_Actor>Menu_c(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_Simulation_Actor.BP_Simulation_Actor_C'"));
+
+	static ConstructorHelpers::FClassFinder<APlayerStat_Actor>PlayerStat_c(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_PlayerStat_Actor.BP_PlayerStat_Actor_C'"));
+
+	static ConstructorHelpers::FClassFinder<ALast_Menu_Actor>Last_c(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_Last_Menu_Actor.BP_Last_Menu_Actor_C'"));
 
 	if (Hand_c.Succeeded()) {
 	
@@ -28,6 +36,16 @@ ASquad_Pawn::ASquad_Pawn()
 	if (Menu_c.Succeeded()) {
 		Menu_class = Menu_c.Class;
 	}
+
+	if (PlayerStat_c.Succeeded()) {
+	
+		class_stat = PlayerStat_c.Class;
+	}
+
+	if (Last_c.Succeeded()) {
+		Last_class = Last_c.Class;
+	}
+	
 
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
@@ -49,20 +67,20 @@ ASquad_Pawn::ASquad_Pawn()
 	Pawn_Movement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("PawnMovement"));
 	Sensing_Component = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("AI_Stimulate"));
 	Sensing_Component->RegisterWithPerceptionSystem();
+
+	
 }
 
 // Called when the game starts or when spawned
 void ASquad_Pawn::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	
-	
-
-
-
+	game_mode = Cast<ASquad_GameMode>(GetWorld()->GetAuthGameMode());
+	//game_mode->Fuc_DeleMulti.AddUObject(this, &ASquad_Pawn::Spawn_Last_Menu);
 
 	Spawn_Hands();
+
+	
 }
 
 // Called every frame
@@ -75,6 +93,7 @@ void ASquad_Pawn::Tick(float DeltaTime)
 // Called to bind functionality to input
 void ASquad_Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
+
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 
@@ -205,12 +224,23 @@ void ASquad_Pawn::Spawn_Menu(const FInputActionValue& Value)
 	if (!Menu_Object) {
 	
 		Menu_Object = GetWorld()->SpawnActor<ASimulation_Actor>(Menu_class, Camera->GetComponentLocation(), Camera->GetComponentRotation());
+		PlayerStat_actor = GetWorld()->SpawnActor<APlayerStat_Actor>(class_stat, Camera->GetComponentLocation(), Camera->GetComponentRotation());
 	}
 	else if (Menu_Object) {
 	
-		Menu_Object->Destroy();
+		Menu_Object->CloseMenu();
 		Menu_Object = nullptr;
+
+		PlayerStat_actor->Destroy();
+		PlayerStat_actor = nullptr;
 	}
+	
+}
+
+void ASquad_Pawn::Spawn_Last_Menu()//모든 오브젝트 수집후 엔딩존 진입
+{
+	auto last=GetWorld()->SpawnActor<ALast_Menu_Actor>(Last_class, Camera->GetComponentLocation(), Camera->GetComponentRotation());
+	//last->Last_Time_Text();
 	
 }
 

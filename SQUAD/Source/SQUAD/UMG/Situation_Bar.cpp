@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "Situation_Bar.h"
@@ -12,26 +12,37 @@ void USituation_Bar::NativeOnInitialized()
 
 	Text_Left_Treasure = Cast<UTextBlock>(GetWidgetFromName(TEXT("Text_Treasure")));
 
-	Button_Exit= Cast<UButton>(GetWidgetFromName(TEXT("ButtonExit")));
+	
 
-	Button_Exit->OnClicked.AddDynamic(this, &USituation_Bar::End_Game);
+	
 	Squad_Mode = Cast<ASquad_GameMode>(GetWorld()->GetAuthGameMode());
 	Squad_Mode->Fuc_Treasure.AddUObject(this, &USituation_Bar::SetTextLeftTreasure);
 
 }
 
-
-
-void USituation_Bar::End_Game()
+void USituation_Bar::NativeConstruct()
 {
-	UKismetSystemLibrary::QuitGame(GetWorld(), GetOwningLocalPlayer()->GetPlayerController(GetWorld()), EQuitPreference::Quit, false);
+	Super::NativeConstruct();
+
+	
+
+
+	SetTextLeftTreasure();
+
+	
+
+	
 
 }
+
 
 void USituation_Bar::SetTextLeftTreasure()
 {
-	Text_Left_Treasure->Text= FText::Format(FText::FromString("³²Àº Å»Ãë¹°ÀÇ °¹¼ö: {0}"), FText::AsNumber(Squad_Mode->count_Treasure));
-
+	FString ScoreString = FString::Printf(TEXT("ë‚¨ì€ íƒˆì·¨ë¬¼ì˜ ê°¯ìˆ˜: %d"), Squad_Mode->count_Treasure);
+	Text_Left_Treasure->SetText(FText::FromString(ScoreString));
+	
 }
+
+
 
 

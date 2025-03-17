@@ -53,6 +53,7 @@ public:
 	void Bind(TObjectPtr<ASquad_Hand>  TargetHand);
 	void UnBind();
 	void TryTrigger();
+	void CheckWeapon();
 
 	UPROPERTY(EditAnywhere,Category=Hand)
 	TObjectPtr<ASquad_Hand> OwingHand;
@@ -65,6 +66,10 @@ public:
 
 	UPROPERTY(EditAnywhere,Category=bheld)
 	bool bheld;
+
+	UPROPERTY(EditAnywhere, Category = Stat)
+	TObjectPtr<class APlayerStat_Actor> PlayerStat;
+
 
 	FRotator InvertRotator(const FRotator& Rotator);
 };

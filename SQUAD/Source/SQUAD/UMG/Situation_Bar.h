@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -22,19 +22,18 @@ public:
 
 	virtual void NativeOnInitialized();
 
-	
+	virtual void NativeConstruct() override;
 
 	UPROPERTY(EditAnywhere, Category = Text)
 	TObjectPtr<UTextBlock> Text_Left_Treasure;
 
-	UPROPERTY(EditAnywhere, Category = Text)
-	TObjectPtr<UButton> Button_Exit;
-
-	UFUNCTION()
-	void End_Game();
 
 	UPROPERTY(EditAnywhere, Category = GameMode)
 	TObjectPtr<ASquad_GameMode> Squad_Mode;
 
 	void SetTextLeftTreasure();
+
+	
+
+	
 };

@@ -13,6 +13,7 @@
 #include "../Collectable.h"
 #include "../Player/Squad_Pawn.h"
 #include "Kismet/GameplayStatics.h"
+#include "Components/WidgetInteractionComponent.h"
 // Sets default values
 ASquad_Hand::ASquad_Hand()
 {
@@ -25,6 +26,9 @@ ASquad_Hand::ASquad_Hand()
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh>HAND_MESH(TEXT("SkeletalMesh'/Game/MaleHand/Mesh/FirstPersonHand.FirstPersonHand'"));
 	motioncontroller = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("MotionController"));
 	
+	Laser = CreateDefaultSubobject<USceneComponent>(TEXT("Laser"));
+	Laser->SetupAttachment(motioncontroller);
+
 	Capsule_Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
 	Capsule_Collision->SetupAttachment(motioncontroller);
 
@@ -36,7 +40,9 @@ ASquad_Hand::ASquad_Hand()
 	}
 	scene_object = CreateDefaultSubobject<USceneComponent>(TEXT("Scene"));
 	scene_object->SetupAttachment(hand_mesh);
-	
+
+	WidgetInteraction = CreateDefaultSubobject<UWidgetInteractionComponent>(TEXT("WidgetInteraction"));
+	WidgetInteraction->SetupAttachment(Laser);
 }
 
 // Called when the game starts or when spawned

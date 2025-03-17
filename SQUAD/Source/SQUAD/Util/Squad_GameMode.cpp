@@ -7,6 +7,7 @@
 #include "Components/AudioComponent.h"
 #include "../Collectable.h"
 #include "Engine/TargetPoint.h"
+#include "TimerManager.h"
 ASquad_GameMode::ASquad_GameMode()
 {
 	static ConstructorHelpers::FClassFinder<AEnemySoldier>cl_soldier(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_EnemySoldier.BP_EnemySoldier_C'"));
@@ -30,7 +31,7 @@ void ASquad_GameMode::BeginPlay()
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATargetPoint::StaticClass(), Target);
 	
 	
-
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &ASquad_GameMode::AddTime, 1.0f, true);
 
 	
 }
@@ -71,4 +72,16 @@ void ASquad_GameMode::SpawnSoldier()
 		}
 	}
 
+}
+
+void ASquad_GameMode::AddTime()
+{
+	time += 1;
+
+}
+
+void ASquad_GameMode::StopTime()
+{
+
+	GetWorldTimerManager().ClearTimer(TimerHandle);
 }

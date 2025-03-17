@@ -6,6 +6,9 @@
 #include "MotionControllerComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "../Weapon/AK_Rifle.h"
+#include "Kismet/GameplayStatics.h"
+#include "../UMG/PlayerStat_Actor.h"
+#include "../UMG/Player_Stat.h"
 // Sets default values for this component's properties
 UGrabComponent::UGrabComponent()
 {
@@ -24,6 +27,8 @@ void UGrabComponent::BeginPlay()
 
 	// ...
 	
+
+	//PlayerStat = Cast<APlayerStat_Actor>(UGameplayStatics::GetActorOfClass(GetWorld(), APlayerStat_Actor::StaticClass()));
 }
 
 
@@ -65,7 +70,7 @@ void UGrabComponent::Bind(TObjectPtr<ASquad_Hand>  TargetHand)
 
 	}
 	
-	
+	//CheckWeapon();
 }
 
 void UGrabComponent::UnBind()
@@ -80,7 +85,7 @@ void UGrabComponent::UnBind()
 	bheld = false;
 	OwingHand = nullptr;
 	GetOwner()->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	
+	//CheckWeapon();
 }
 
 void UGrabComponent::TryTrigger()
@@ -90,6 +95,17 @@ void UGrabComponent::TryTrigger()
 		if (grabtrigger.IsBound()) {
 			grabtrigger.Broadcast();
 		}
+	}
+
+}
+
+void UGrabComponent::CheckWeapon()
+{
+	
+
+	if (GetOwner()->IsA(APlayerStat_Actor::StaticClass())) {
+
+		PlayerStat->Player_Stat->SwitchImage();
 	}
 
 }

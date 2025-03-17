@@ -126,25 +126,34 @@ void AAK_Rifle::BeginPlay()
 	//
 	Ammo_UMG = Cast<UGun_Ammo>(Widget_Ammo->GetWidget());
 	
-	Ammo_UMG->Ammo->Text= FText::Format(FText::FromString("{0}/{1}"),FText::AsNumber(current_ammo), FText::AsNumber(max_ammo));
+	FString AmmoString = FString::Printf(TEXT("%d/%d"), current_ammo,max_ammo);
+	Ammo_UMG->Ammo->SetText(FText::FromString(AmmoString));
+
+	
 }
 
 void AAK_Rifle::Weapon_Fire()
 {
-	current_ammo--;
-	current_ammo = FMath::Clamp(current_ammo, 0, max_ammo);
-	Ammo_UMG->Ammo->Text = FText::Format(FText::FromString("{0}/{1}"), FText::AsNumber(current_ammo), FText::AsNumber(max_ammo));
+	
+	//Ammo_UMG->Ammo->Text = FText::Format(FText::FromString("{0}/{1}"), FText::AsNumber(current_ammo), FText::AsNumber(max_ammo));
+	
 	Magazine_Position = main_part->GetSocketLocation(magazine_socket);
 	
 	if (Magazine_Object) {
 		
+		current_ammo--;
+		
+
 		if (current_ammo > 0) {
-			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("Current Ammo : %d"),current_ammo));
+			current_ammo = FMath::Clamp(current_ammo, 0, max_ammo);
+			//GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("Current Ammo : %d"),current_ammo));
 			gun_muzzle_location = Muzzle_Fire->GetComponentLocation();
 			gun_muzzle_rotation = Muzzle_Fire->GetComponentRotation();
 			UGameplayStatics::PlaySoundAtLocation(this, *Squad_Instance->Map_Cue.Find(TEXT("Gun_Fire")), gun_muzzle_location);//소리재생
 			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), *Squad_Instance->Map_Vfx.Find("Muzzle_Vfx"), gun_muzzle_location, gun_muzzle_rotation);
 			GetWorld()->SpawnActor<ABullet>(BulletClass, gun_muzzle_location, gun_muzzle_rotation);
+			FString AmmoString = FString::Printf(TEXT("%d/%d"), current_ammo, max_ammo);
+			Ammo_UMG->Ammo->SetText(FText::FromString(AmmoString));
 		}
 		else if (current_ammo == 0) {
 
@@ -153,8 +162,11 @@ void AAK_Rifle::Weapon_Fire()
 			Gun_Animinstance->Montage_Play(*Squad_Instance->Map_Montage.Find(TEXT("Gun_Fire")));
 			Magazine_Object->Magazine_Out();
 			Magazine_Object = nullptr;
+			FString AmmoString = FString::Printf(TEXT("%d/%d"), current_ammo, max_ammo);
+			Ammo_UMG->Ammo->SetText(FText::FromString(AmmoString));
 		}
 	
+		
 	}
 	
 	//GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("Location (%f %f %f)"), gun_muzzle_location.X, gun_muzzle_location.Y, gun_muzzle_location.Z));
@@ -165,7 +177,9 @@ void AAK_Rifle::Reload_Ammo()
 {
 	
 	current_ammo = max_ammo;
-	Ammo_UMG->Ammo->Text = FText::Format(FText::FromString("{0}/{1}"), FText::AsNumber(current_ammo), FText::AsNumber(max_ammo));
+	//Ammo_UMG->Ammo->Text = FText::Format(FText::FromString("{0}/{1}"), FText::AsNumber(current_ammo), FText::AsNumber(max_ammo));
+	FString AmmoString = FString::Printf(TEXT("%d/%d"), current_ammo, max_ammo);
+	Ammo_UMG->Ammo->SetText(FText::FromString(AmmoString));
 	Magazine_Position = main_part->GetSocketLocation(magazine_socket);
 	UGameplayStatics::PlaySoundAtLocation(this, *Squad_Instance->Map_Cue.Find(TEXT("Gun_Magazine_In")), Magazine_Position);
 }
