@@ -41,8 +41,7 @@ void AEndArea::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Other
 		TArray<AActor*> FoundActors;
 		UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACollectable::StaticClass(), FoundActors);
 		if (FoundActors.Num() == 0) {
-			auto gamemode = Cast<ASquad_GameMode>(GetWorld()->GetAuthGameMode());
-			gamemode->StopTime();
+			
 			auto pawn = Cast<ASquad_Pawn>(UGameplayStatics::GetActorOfClass(GetWorld(), ASquad_Pawn::StaticClass()));
 			pawn->Spawn_Last_Menu();
 			

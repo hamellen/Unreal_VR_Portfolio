@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
-#include	<xdevapi.h>
+//#include	<xdevapi.h>
 #include "SquadGameInstance.generated.h"
 
 class UNiagaraSystem;
@@ -21,8 +21,8 @@ class SQUAD_API USquadGameInstance : public UGameInstance
 	virtual void Init() override;
 
 
-	mysqlx::Session* m_Session;
-	mysqlx::Schema* m_SchemaDB;
+	//mysqlx::Session* m_Session;
+	//mysqlx::Schema* m_SchemaDB;
 
 public:
 	USquadGameInstance();
@@ -33,11 +33,11 @@ public:
 
 	
 
-	void ConnectToDataBase(const FString& host, int32 port, const FString& username, const FString& password, const FString& schema);
+	/*void ConnectToDataBase(const FString& host, int32 port, const FString& username, const FString& password, const FString& schema);
 
 	
 
-	void CloseDatabaseConnection();
+	void CloseDatabaseConnection();*/
 
 	
 	UPROPERTY(EditAnywhere, Category = SFX)

@@ -28,7 +28,7 @@ void UGrabComponent::BeginPlay()
 	// ...
 	
 
-	//PlayerStat = Cast<APlayerStat_Actor>(UGameplayStatics::GetActorOfClass(GetWorld(), APlayerStat_Actor::StaticClass()));
+	
 }
 
 
@@ -70,7 +70,7 @@ void UGrabComponent::Bind(TObjectPtr<ASquad_Hand>  TargetHand)
 
 	}
 	
-	//CheckWeapon();
+	
 }
 
 void UGrabComponent::UnBind()
@@ -85,7 +85,7 @@ void UGrabComponent::UnBind()
 	bheld = false;
 	OwingHand = nullptr;
 	GetOwner()->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	//CheckWeapon();
+	
 }
 
 void UGrabComponent::TryTrigger()

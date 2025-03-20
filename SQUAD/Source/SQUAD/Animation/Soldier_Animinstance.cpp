@@ -8,7 +8,7 @@ void USoldier_Animinstance::NativeInitializeAnimation()
 {
 	Super::NativeInitializeAnimation();
 
-	//static ConstructorHelpers::FClassFinder<ABullet>bullet(TEXT("/Script/Engine.Blueprint'/Game/Blueprint/BP_Bullet_Enemy.BP_Bullet_Enemy_C'"));
+	
 
 	enemy = Cast<AEnemySoldier>(TryGetPawnOwner());
 

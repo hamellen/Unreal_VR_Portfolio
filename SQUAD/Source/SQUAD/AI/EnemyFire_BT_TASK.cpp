@@ -26,7 +26,6 @@ EBTNodeResult::Type UEnemyFire_BT_TASK::ExecuteTask(UBehaviorTreeComponent& Owne
 
 	FRotator rotation = UKismetMathLibrary::FindLookAtRotation(pawn->GetActorLocation(), location);
 	pawn->SetActorRotation(rotation);
-
 	pawn->Fire();
 	
 	FOnMontageEnded EndDelegate;

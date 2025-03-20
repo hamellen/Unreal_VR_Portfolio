@@ -25,14 +25,14 @@ void UPlayer_Stat::NativeConstruct()
 	Weapon_image->SetRenderOpacity(0.0f);
 
 	ProgressBar->SetPercent((float)player->Stat->Current_Hp / (float)player->Stat->Max_Hp);
-
+	player->Fuc_DeleMulti.AddUObject(this, &UPlayer_Stat::StatEvent);
 }
 
 void UPlayer_Stat::StatEvent()
 {
 
 	ProgressBar->SetPercent((float)player->Stat->Current_Hp / (float)player->Stat->Max_Hp);
-
+	
 }
 
 void UPlayer_Stat::SwitchImage()

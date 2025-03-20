@@ -22,7 +22,7 @@ void ULast_Menu::NativeConstruct()
 
 	game_mode = Cast<ASquad_GameMode>(GetWorld()->GetAuthGameMode());
 
-	//Exit_Button->OnClicked.AddDynamic(this, &ULast_Menu::QuitGame);
+	
 }
 
 void ULast_Menu::QuitGame()

@@ -115,7 +115,6 @@ void AAK_Rifle::BeginPlay()
 {
 	Super::BeginPlay();
 	Gun_Animinstance = Cast<URifle_Animinstance>(main_part->GetAnimInstance());
-	//current_ammo = max_ammo;
 	GrabComponent->grabtrigger.AddUObject(this, &AAK_Rifle::Weapon_Fire);
 	Squad_Instance = Cast<USquadGameInstance>(GetWorld()->GetGameInstance());
 	
@@ -135,16 +134,15 @@ void AAK_Rifle::BeginPlay()
 void AAK_Rifle::Weapon_Fire()
 {
 	
-	//Ammo_UMG->Ammo->Text = FText::Format(FText::FromString("{0}/{1}"), FText::AsNumber(current_ammo), FText::AsNumber(max_ammo));
+	
 	
 	Magazine_Position = main_part->GetSocketLocation(magazine_socket);
 	
 	if (Magazine_Object) {
 		
-		current_ammo--;
-		
 
 		if (current_ammo > 0) {
+			current_ammo--;
 			current_ammo = FMath::Clamp(current_ammo, 0, max_ammo);
 			//GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("Current Ammo : %d"),current_ammo));
 			gun_muzzle_location = Muzzle_Fire->GetComponentLocation();
@@ -169,7 +167,7 @@ void AAK_Rifle::Weapon_Fire()
 		
 	}
 	
-	//GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("Location (%f %f %f)"), gun_muzzle_location.X, gun_muzzle_location.Y, gun_muzzle_location.Z));
+	
 
 }
 
@@ -177,7 +175,7 @@ void AAK_Rifle::Reload_Ammo()
 {
 	
 	current_ammo = max_ammo;
-	//Ammo_UMG->Ammo->Text = FText::Format(FText::FromString("{0}/{1}"), FText::AsNumber(current_ammo), FText::AsNumber(max_ammo));
+	
 	FString AmmoString = FString::Printf(TEXT("%d/%d"), current_ammo, max_ammo);
 	Ammo_UMG->Ammo->SetText(FText::FromString(AmmoString));
 	Magazine_Position = main_part->GetSocketLocation(magazine_socket);
@@ -226,7 +224,7 @@ void AAK_Rifle::OnEndHandOverlap(UPrimitiveComponent* OverlappedComp, AActor* Ot
 
 void AAK_Rifle::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("Magazine Reload")));
+	//GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("Magazine Reload")));
 
 	if (OtherActor->IsA(AMagazine::StaticClass())) {
 		

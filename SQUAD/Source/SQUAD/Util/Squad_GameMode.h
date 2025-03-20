@@ -27,8 +27,7 @@ public:
 
 	void Left_Treasure();
 
-	UPROPERTY(VisibleAnywhere,Category=Time)
-	int time=0;
+	
 
 	UPROPERTY(EditAnywhere, Category = Count)
 	int32 count_Treasure;
@@ -47,7 +46,5 @@ public:
 
 	FTimerHandle TimerHandle;
 
-	void AddTime();
-
-	void StopTime();
+	
 };

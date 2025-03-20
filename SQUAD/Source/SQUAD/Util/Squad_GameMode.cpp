@@ -31,7 +31,7 @@ void ASquad_GameMode::BeginPlay()
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATargetPoint::StaticClass(), Target);
 	
 	
-	GetWorldTimerManager().SetTimer(TimerHandle, this, &ASquad_GameMode::AddTime, 1.0f, true);
+	
 
 	
 }
@@ -74,14 +74,4 @@ void ASquad_GameMode::SpawnSoldier()
 
 }
 
-void ASquad_GameMode::AddTime()
-{
-	time += 1;
 
-}
-
-void ASquad_GameMode::StopTime()
-{
-
-	GetWorldTimerManager().ClearTimer(TimerHandle);
-}

@@ -1,4 +1,4 @@
- // Fill out your copyright notice in the Description page of Project Settings.
+ï»¿ // Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "Squad_Pawn.h"
@@ -10,6 +10,8 @@
 #include "EnhancedInputComponent.h"
 #include "Components/InputComponent.h"
 #include "Squad_Hand.h"
+#include "Kismet/GameplayStatics.h"
+#include "../Util/SquadGameInstance.h"
 #include "GameFramework/FloatingPawnMovement.h"
 #include "Perception/AIPerceptionStimuliSourceComponent.h"
 #include "../UMG/Simulation_Actor.h"
@@ -17,6 +19,9 @@
 #include "../UMG/Situation_Bar.h"
 #include"../UMG/PlayerStat_Actor.h"
 #include "../UMG/Last_Menu_Actor.h"
+#include "../Weapon/Bullet.h"
+#include "Kismet/GameplayStatics.h"
+#include "Sound/SoundCue.h"
 // Sets default values
 ASquad_Pawn::ASquad_Pawn()
 {
@@ -76,10 +81,10 @@ void ASquad_Pawn::BeginPlay()
 {
 	Super::BeginPlay();
 	game_mode = Cast<ASquad_GameMode>(GetWorld()->GetAuthGameMode());
-	//game_mode->Fuc_DeleMulti.AddUObject(this, &ASquad_Pawn::Spawn_Last_Menu);
-
+	
+	CapsuleComponent->OnComponentHit.AddDynamic(this, &ASquad_Pawn::OnHit);
 	Spawn_Hands();
-
+	Squad_Instance = Cast<USquadGameInstance>(GetWorld()->GetGameInstance());
 	
 }
 
@@ -117,7 +122,7 @@ void ASquad_Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 		
 		Input->BindAction(IA_Menu, ETriggerEvent::Started, this, &ThisClass::Spawn_Menu);
 
-		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Setup Complete"));
+		
 	}
 
 }
@@ -237,10 +242,23 @@ void ASquad_Pawn::Spawn_Menu(const FInputActionValue& Value)
 	
 }
 
-void ASquad_Pawn::Spawn_Last_Menu()//¸ðµç ¿ÀºêÁ§Æ® ¼öÁýÈÄ ¿£µùÁ¸ ÁøÀÔ
+void ASquad_Pawn::Spawn_Last_Menu()//ëª¨ë“  ì˜¤ë¸Œì íŠ¸ ìˆ˜ì§‘í›„ ì—”ë”©ì¡´ ì§„ìž…
 {
 	auto last=GetWorld()->SpawnActor<ALast_Menu_Actor>(Last_class, Camera->GetComponentLocation(), Camera->GetComponentRotation());
-	//last->Last_Time_Text();
 	
+	
+}
+
+void ASquad_Pawn::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+
+	if (OtherActor->IsA(ABullet::StaticClass())) {
+	
+		
+		UGameplayStatics::PlaySoundAtLocation(this, *Squad_Instance->Map_Cue.Find(TEXT("Hited_sfx")), GetActorLocation());
+		Stat->Current_Hp -= 5;
+		Fuc_DeleMulti.Broadcast();
+	}
+
 }
 

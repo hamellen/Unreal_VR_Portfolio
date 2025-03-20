@@ -51,7 +51,7 @@ void AEnemy_Controller::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Sti
 	{
 		if (Stimulus.WasSuccessfullySensed())
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Player Detected"));
+			
 
 			if (Blackboard) {
 				Blackboard->SetValueAsObject(TEXT("Player"), Actor);
@@ -60,7 +60,7 @@ void AEnemy_Controller::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Sti
 		}
 		else
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Player UnDetected"));
+			
 			if (Blackboard) {
 				Blackboard->SetValueAsObject(TEXT("Player"), nullptr);
 				soldier->ReadyToFire = false;
@@ -71,3 +71,8 @@ void AEnemy_Controller::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Sti
 
 
 }
+
+
+
+
+

@@ -47,7 +47,7 @@ void ALast_Menu_Actor::BeginPlay()
 
 	Last_Object = Cast<ULast_Menu>(Last_Component->GetWidget());
 
-	//Last_Object->Set_Text_Last_Time();
+	
 
 
 

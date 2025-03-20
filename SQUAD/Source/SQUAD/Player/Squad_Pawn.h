@@ -21,6 +21,7 @@ class ASimulation_Actor;
 class APlayerStat_Actor;
 class UWidgetComponent;
 class ALast_Menu_Actor;
+class USquadGameInstance;
 UCLASS()
 class SQUAD_API ASquad_Pawn : public APawn
 {
@@ -116,6 +117,9 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = PlayerStat)
 	TObjectPtr< APlayerStat_Actor> PlayerStat_actor;
 
+	UPROPERTY(EditAnywhere, Category = Animation)
+	TObjectPtr<class USquadGameInstance> Squad_Instance;
+
 
 	UPROPERTY(EditAnywhere,Category=Goal)
 	int32 current_number_goal;
@@ -148,4 +152,9 @@ public:
 
 
 	FDele_Multi Fuc_DeleMulti;//bullet hited
+
+	UFUNCTION()
+	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, FVector NormalImpulse,
+		const FHitResult& Hit);
 };

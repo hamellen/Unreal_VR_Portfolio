@@ -35,9 +35,7 @@ void ABullet::BeginPlay()
 	Projectile->Velocity = CapsuleCollision->GetForwardVector() * Projectile->InitialSpeed;
 	NiagaraSystem = *Cast<USquadGameInstance>(GetWorld()->GetGameInstance())->Map_Vfx.Find("Bullet_Vfx");
 
-	if (NiagaraSystem) {
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("NiagaraSystem Exist")));
-	}
+	
 	NiagaraComponent->SetAsset(NiagaraSystem);
 	NiagaraComponent->Activate(true);
 	SetLifeSpan(5.0f);

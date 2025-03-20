@@ -113,7 +113,7 @@ void AEnemySoldier::Fire()
 	UGameplayStatics::PlaySoundAtLocation(this, *Squad_Instance->Map_Cue.Find(TEXT("Gun_Fire")), gun_mesh->GetComponentLocation());//소리재생
 	UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), *Squad_Instance->Map_Vfx.Find("Muzzle_Vfx"), gun_mesh->GetComponentLocation(), gun_mesh->GetComponentRotation());
 
-	//soldier_anim->Montage_SetEndDelegate(FOnMontageEnded::CreateUObject(this, &AEnemySoldier::OnMontageEnded), soldier_anim->Fire_Montage);
+	
 	
 }
 

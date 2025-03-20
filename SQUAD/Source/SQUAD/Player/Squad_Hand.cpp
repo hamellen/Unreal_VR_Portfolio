@@ -49,7 +49,7 @@ ASquad_Hand::ASquad_Hand()
 void ASquad_Hand::BeginPlay()
 {
 	Super::BeginPlay();
-	//motioncontroller->SetSimulatePhysics(true);
+	
 	hand_instance= Cast<UHand_instance>(hand_mesh->GetAnimInstance());
 	if (!hand_instance) {
 		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("No hand instance"));
@@ -58,7 +58,7 @@ void ASquad_Hand::BeginPlay()
 
 
 	Squad_Pawn_Object = Cast<ASquad_Pawn>(GetWorld()->GetFirstPlayerController()->GetPawn());
-	//hand_mesh->OnComponentHit.AddDynamic(this, &ASquad_Hand::OnGetTreasure);
+	
 }
 
 // Called every frame
@@ -99,7 +99,7 @@ void ASquad_Hand::Release()
 		return;
 	}
 
-	//DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	
 	hand_instance->Pose_Index = 0;
 
 }
@@ -122,13 +122,13 @@ void ASquad_Hand::ResetHandMesh()
 
 void ASquad_Hand::OnGetTreasure(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Treasure Get"));
+	
 	if (Hit.GetActor()->IsA(ACollectable::StaticClass())) {
 	
-		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("Treasure Get"));
+		
 
 		Squad_Pawn_Object->current_number_goal++;
-		//UGameplayStatics::PlaySoundAtLocation(this, SoundCue, GetActorLocation());
+		
 		OtherActor->Destroy();
 	}
 
@@ -159,7 +159,7 @@ class UGrabComponent* ASquad_Hand::FindGrabComponent()
 		TObjectPtr<ARifle> rifle = Cast<ARifle>(OverlapResults[0].GetActor());
 
 		if (rifle) {
-			DrawDebugSphere(GetWorld(), motion_location, secsing_rad, 26, FColor::Green, false, 2, 0, 2);
+			
 			return rifle->FindComponentByClass<UGrabComponent>();
 
 		}
@@ -167,7 +167,7 @@ class UGrabComponent* ASquad_Hand::FindGrabComponent()
 
 		if (magazine) {
 		
-			DrawDebugSphere(GetWorld(), motion_location, secsing_rad, 26, FColor::Green, false, 2, 0, 2);
+			
 			return magazine->FindComponentByClass<UGrabComponent>();
 		}
 
