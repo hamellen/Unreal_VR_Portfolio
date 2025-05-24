@@ -55,6 +55,14 @@
 				"Win64",
 				"Android"
 			]
+		},
+		{
+			"Name": "RiderSourceCodeAccess",
+			"Enabled": false
+		},
+		{
+			"Name": "OculusAudio",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [

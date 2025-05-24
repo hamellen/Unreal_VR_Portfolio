@@ -1,0 +1,1245 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Unreal_VR_Portfolio\\SQUAD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD.Target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD.Target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Pawn.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Player\\Squad_Pawn.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\Enemy_Controller.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Monster\\Enemy_Controller.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Player_Stat.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Player_Stat.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Pawn.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Player\\Squad_Pawn.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\StatComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Component\\StatComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Weapon\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\StatComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Component\\StatComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\AK_Rifle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Weapon\\AK_Rifle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\AK_Rifle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Weapon\\AK_Rifle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_SetPlayerPosition.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\AI\\BT_SetPlayerPosition.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_SetPlayerPosition.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\AI\\BT_SetPlayerPosition.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\EnemyFire_BT_TASK.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\AI\\EnemyFire_BT_TASK.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\SquadPlayerController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Player\\SquadPlayerController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\Enemy_Controller.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Monster\\Enemy_Controller.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\GrabComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Component\\GrabComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Rifle_Animinstance.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Animation\\Rifle_Animinstance.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\EnemyFire_BT_TASK.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\AI\\EnemyFire_BT_TASK.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\MySqlComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Source\\SQUAD\\Component\\MySqlComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\SQUAD.Build.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\SQUAD.Build.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadGameInstance.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Util\\SquadGameInstance.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadGameInstance.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Util\\SquadGameInstance.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Last_Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Squad_GameMode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Util\\Squad_GameMode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadSingle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Util\\SquadSingle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\EnemySoldier.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Monster\\EnemySoldier.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Last_Menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu_Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Last_Menu_Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Simulation_Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Simulation_Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\EndArea.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Player\\EndArea.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Situation_Bar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Situation_Bar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Player_Stat.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Player_Stat.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\PlayerStat_Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\PlayerStat_Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Hand.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Player\\Squad_Hand.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\SquadPlayerController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Player\\SquadPlayerController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Gun_Ammo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Gun_Ammo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Weapon\\Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Collectable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Collectable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\SirenHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Monster\\SirenHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Soldier_Animinstance.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Animation\\Soldier_Animinstance.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\BasicMonster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Monster\\BasicMonster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Rifle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Weapon\\Rifle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Magazine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Weapon\\Magazine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Hand_instance.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Animation\\Hand_instance.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Rifle_Animinstance.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Animation\\Rifle_Animinstance.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Define.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Util\\Define.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\TestActor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\TestActor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Situation_Bar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Situation_Bar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Squad_GameMode.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Util\\Squad_GameMode.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Collectable.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Collectable.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Rifle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Weapon\\Rifle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Magazine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Weapon\\Magazine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadSingle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Util\\SquadSingle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Define.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Util\\Define.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Simulation_Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Simulation_Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\PlayerStat_Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\PlayerStat_Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu_Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Last_Menu_Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Gun_Ammo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\UMG\\Gun_Ammo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Hand.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Player\\Squad_Hand.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\EndArea.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Player\\EndArea.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\SirenHeader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Monster\\SirenHeader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\EnemySoldier.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Monster\\EnemySoldier.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\BasicMonster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Monster\\BasicMonster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\GrabComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Component\\GrabComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Soldier_Animinstance.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Animation\\Soldier_Animinstance.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Hand_instance.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\Animation\\Hand_instance.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BE65A85-868C-31D4-B926-C195F8007034}|Intermediate\\ProjectFiles\\UE5.vcxproj|E:\\UE_5.3\\Engine\\Source\\Runtime\\CoreUObject\\Public\\UObject\\ConstructorHelpers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BE65A85-868C-31D4-B926-C195F8007034}|Intermediate\\ProjectFiles\\UE5.vcxproj|E:\\UE_5.3\\Engine\\Source\\Runtime\\CoreUObject\\Public\\UObject\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\TestActor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B4C4447-19AA-3913-BB0C-8C6F10344102}|Intermediate\\ProjectFiles\\SQUAD.vcxproj|solutionrelative:Source\\SQUAD\\TestActor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\MySqlComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Source\\SQUAD\\Component\\MySqlComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 191,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Squad_Pawn.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Pawn.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Player\\Squad_Pawn.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Pawn.h",
+              "RelativeToolTip": "Source\\SQUAD\\Player\\Squad_Pawn.h",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-28T13:58:01.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AK_Rifle.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\AK_Rifle.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Weapon\\AK_Rifle.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\AK_Rifle.h",
+              "RelativeToolTip": "Source\\SQUAD\\Weapon\\AK_Rifle.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-28T06:23:03.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StatComponent.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\StatComponent.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Component\\StatComponent.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\StatComponent.h",
+              "RelativeToolTip": "Source\\SQUAD\\Component\\StatComponent.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-22T15:41:05.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SQUAD.Target.cs",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD.Target.cs",
+              "RelativeDocumentMoniker": "Source\\SQUAD.Target.cs",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD.Target.cs",
+              "RelativeToolTip": "Source\\SQUAD.Target.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T15:00:43.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Set_PlayerPostion_BTService.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.h",
+              "RelativeToolTip": "Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-12T12:23:06.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BT_SetPlayerPosition.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_SetPlayerPosition.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\AI\\BT_SetPlayerPosition.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_SetPlayerPosition.h",
+              "RelativeToolTip": "Source\\SQUAD\\AI\\BT_SetPlayerPosition.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-20T13:48:31.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Enemy_Controller.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\Enemy_Controller.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Monster\\Enemy_Controller.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\Enemy_Controller.h",
+              "RelativeToolTip": "Source\\SQUAD\\Monster\\Enemy_Controller.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-11T10:14:40.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GrabComponent.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\GrabComponent.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Component\\GrabComponent.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\GrabComponent.h",
+              "RelativeToolTip": "Source\\SQUAD\\Component\\GrabComponent.h",
+              "ViewState": "AgIAACkAAAAAAAAAAAAQwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-28T06:20:32.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EnemyFire_BT_TASK.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\EnemyFire_BT_TASK.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\AI\\EnemyFire_BT_TASK.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\EnemyFire_BT_TASK.h",
+              "RelativeToolTip": "Source\\SQUAD\\AI\\EnemyFire_BT_TASK.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-12T13:06:58.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MySqlComponent.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\MySqlComponent.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Component\\MySqlComponent.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\MySqlComponent.h",
+              "RelativeToolTip": "Source\\SQUAD\\Component\\MySqlComponent.h",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-24T13:53:58.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SquadGameInstance.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadGameInstance.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Util\\SquadGameInstance.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadGameInstance.h",
+              "RelativeToolTip": "Source\\SQUAD\\Util\\SquadGameInstance.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-25T07:16:46.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SQUAD.Build.cs",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\SQUAD.Build.cs",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\SQUAD.Build.cs",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\SQUAD.Build.cs",
+              "RelativeToolTip": "Source\\SQUAD\\SQUAD.Build.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T11:59:54.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Squad_GameMode.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Squad_GameMode.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Util\\Squad_GameMode.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Squad_GameMode.h",
+              "RelativeToolTip": "Source\\SQUAD\\Util\\Squad_GameMode.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-04T14:21:09.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SquadSingle.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadSingle.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Util\\SquadSingle.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadSingle.h",
+              "RelativeToolTip": "Source\\SQUAD\\Util\\SquadSingle.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-28T15:11:04.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "EnemySoldier.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\EnemySoldier.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Monster\\EnemySoldier.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\EnemySoldier.h",
+              "RelativeToolTip": "Source\\SQUAD\\Monster\\EnemySoldier.h",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-11T07:45:18.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "BT_TASK_FindRandomPatrol.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.h",
+              "RelativeToolTip": "Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-12T12:27:40.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Last_Menu.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Last_Menu.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu.h",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Last_Menu.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-17T13:32:56.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Last_Menu_Actor.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu_Actor.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Last_Menu_Actor.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu_Actor.h",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Last_Menu_Actor.h",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-17T13:47:20.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Simulation_Actor.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Simulation_Actor.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Simulation_Actor.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Simulation_Actor.h",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Simulation_Actor.h",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-14T15:28:23.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EndArea.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\EndArea.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Player\\EndArea.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\EndArea.h",
+              "RelativeToolTip": "Source\\SQUAD\\Player\\EndArea.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-16T16:20:22.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Situation_Bar.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Situation_Bar.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Situation_Bar.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Situation_Bar.h",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Situation_Bar.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-14T14:34:07.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Player_Stat.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Player_Stat.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Player_Stat.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Player_Stat.h",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Player_Stat.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-16T13:08:42.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "PlayerStat_Actor.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\PlayerStat_Actor.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\PlayerStat_Actor.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\PlayerStat_Actor.h",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\PlayerStat_Actor.h",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvzIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-16T13:37:53.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Squad_Hand.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Hand.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Player\\Squad_Hand.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Hand.h",
+              "RelativeToolTip": "Source\\SQUAD\\Player\\Squad_Hand.h",
+              "ViewState": "AgIAADcAAAAAAAAAAAAMwE8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-25T14:23:49.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SquadPlayerController.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\SquadPlayerController.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Player\\SquadPlayerController.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\SquadPlayerController.h",
+              "RelativeToolTip": "Source\\SQUAD\\Player\\SquadPlayerController.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-25T10:49:59.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Gun_Ammo.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Gun_Ammo.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Gun_Ammo.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Gun_Ammo.h",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Gun_Ammo.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-07T07:41:42.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Bullet.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Bullet.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Weapon\\Bullet.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Bullet.h",
+              "RelativeToolTip": "Source\\SQUAD\\Weapon\\Bullet.h",
+              "ViewState": "AgIAABoAAAAAAAAAAADwvygAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-07T13:15:31.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Collectable.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Collectable.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Collectable.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Collectable.h",
+              "RelativeToolTip": "Source\\SQUAD\\Collectable.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-08T15:55:47.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "SirenHeader.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\SirenHeader.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Monster\\SirenHeader.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\SirenHeader.h",
+              "RelativeToolTip": "Source\\SQUAD\\Monster\\SirenHeader.h",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvxwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-13T15:01:39.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Soldier_Animinstance.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Soldier_Animinstance.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Animation\\Soldier_Animinstance.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Soldier_Animinstance.h",
+              "RelativeToolTip": "Source\\SQUAD\\Animation\\Soldier_Animinstance.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-11T08:05:14.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "BasicMonster.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\BasicMonster.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Monster\\BasicMonster.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\BasicMonster.h",
+              "RelativeToolTip": "Source\\SQUAD\\Monster\\BasicMonster.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-08T15:45:36.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Rifle.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Rifle.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Weapon\\Rifle.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Rifle.h",
+              "RelativeToolTip": "Source\\SQUAD\\Weapon\\Rifle.h",
+              "ViewState": "AgIAABQAAAAAAAAAAADwvycAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-22T15:36:28.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Magazine.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Magazine.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Weapon\\Magazine.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Magazine.h",
+              "RelativeToolTip": "Source\\SQUAD\\Weapon\\Magazine.h",
+              "ViewState": "AgIAABEAAAAAAAAAAAArwCYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-28T07:53:32.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Hand_instance.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Hand_instance.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Animation\\Hand_instance.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Hand_instance.h",
+              "RelativeToolTip": "Source\\SQUAD\\Animation\\Hand_instance.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-27T14:24:03.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Rifle_Animinstance.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Rifle_Animinstance.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Animation\\Rifle_Animinstance.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Rifle_Animinstance.h",
+              "RelativeToolTip": "Source\\SQUAD\\Animation\\Rifle_Animinstance.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-28T07:43:44.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Define.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Define.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Util\\Define.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Define.h",
+              "RelativeToolTip": "Source\\SQUAD\\Util\\Define.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-02T12:37:16.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "SQUAD_Gameplay_Tags.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.h",
+              "RelativeToolTip": "Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-25T14:15:07.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "TestActor.h",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\TestActor.h",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\TestActor.h",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\TestActor.h",
+              "RelativeToolTip": "Source\\SQUAD\\TestActor.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-19T09:12:07.947Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 209,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AK_Rifle.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\AK_Rifle.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Weapon\\AK_Rifle.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\AK_Rifle.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Weapon\\AK_Rifle.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T06:23:03.704Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Squad_Pawn.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Pawn.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Player\\Squad_Pawn.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Pawn.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Player\\Squad_Pawn.cpp",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAAAAMBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-25T09:27:12.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StatComponent.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\StatComponent.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Component\\StatComponent.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\StatComponent.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Component\\StatComponent.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-22T15:41:06.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player_Stat.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Player_Stat.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Player_Stat.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Player_Stat.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Player_Stat.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-16T13:08:43.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enemy_Controller.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\Enemy_Controller.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Monster\\Enemy_Controller.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\Enemy_Controller.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Monster\\Enemy_Controller.cpp",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-11T10:14:41.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Bullet.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Bullet.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Weapon\\Bullet.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Bullet.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Weapon\\Bullet.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-07T13:15:31.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BT_SetPlayerPosition.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_SetPlayerPosition.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\AI\\BT_SetPlayerPosition.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_SetPlayerPosition.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\AI\\BT_SetPlayerPosition.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-20T13:48:32.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Set_PlayerPostion_BTService.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\AI\\Set_PlayerPostion_BTService.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-12T12:23:07.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EnemyFire_BT_TASK.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\EnemyFire_BT_TASK.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\AI\\EnemyFire_BT_TASK.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\EnemyFire_BT_TASK.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\AI\\EnemyFire_BT_TASK.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-12T13:06:59.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SquadPlayerController.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\SquadPlayerController.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Player\\SquadPlayerController.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\SquadPlayerController.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Player\\SquadPlayerController.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-25T10:49:59.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Rifle_Animinstance.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Rifle_Animinstance.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Animation\\Rifle_Animinstance.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Rifle_Animinstance.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Animation\\Rifle_Animinstance.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T07:43:45.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "MySqlComponent.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\MySqlComponent.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Component\\MySqlComponent.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\MySqlComponent.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Component\\MySqlComponent.cpp",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-24T13:53:59.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SquadGameInstance.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadGameInstance.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Util\\SquadGameInstance.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadGameInstance.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Util\\SquadGameInstance.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-25T07:16:46.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Last_Menu.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Last_Menu.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Last_Menu.cpp",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-17T13:32:57.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Situation_Bar.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Situation_Bar.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Situation_Bar.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Situation_Bar.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Situation_Bar.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-14T14:34:08.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Squad_GameMode.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Squad_GameMode.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Util\\Squad_GameMode.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Squad_GameMode.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Util\\Squad_GameMode.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAB4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-04T14:21:11.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Collectable.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Collectable.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Collectable.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Collectable.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Collectable.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-08T15:55:47.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Rifle.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Rifle.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Weapon\\Rifle.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Rifle.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Weapon\\Rifle.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-22T15:36:18.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Magazine.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Magazine.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Weapon\\Magazine.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Weapon\\Magazine.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Weapon\\Magazine.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAD8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T07:53:33.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "SquadSingle.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadSingle.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Util\\SquadSingle.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SquadSingle.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Util\\SquadSingle.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T15:11:05.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "SQUAD_Gameplay_Tags.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Util\\SQUAD_Gameplay_Tags.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-25T14:15:07.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Define.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Define.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Util\\Define.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Util\\Define.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Util\\Define.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-02T12:37:17.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Simulation_Actor.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Simulation_Actor.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Simulation_Actor.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Simulation_Actor.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Simulation_Actor.cpp",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-14T15:28:24.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "PlayerStat_Actor.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\PlayerStat_Actor.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\PlayerStat_Actor.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\PlayerStat_Actor.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\PlayerStat_Actor.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-16T13:37:53.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "Last_Menu_Actor.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu_Actor.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Last_Menu_Actor.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Last_Menu_Actor.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Last_Menu_Actor.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-17T13:47:21.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "Gun_Ammo.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Gun_Ammo.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\UMG\\Gun_Ammo.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\UMG\\Gun_Ammo.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\UMG\\Gun_Ammo.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-07T07:41:43.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Squad_Hand.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Hand.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Player\\Squad_Hand.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\Squad_Hand.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Player\\Squad_Hand.cpp",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-25T14:23:49.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "EndArea.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\EndArea.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Player\\EndArea.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Player\\EndArea.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Player\\EndArea.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-16T16:20:23.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "SirenHeader.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\SirenHeader.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Monster\\SirenHeader.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\SirenHeader.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Monster\\SirenHeader.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-13T15:01:40.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "EnemySoldier.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\EnemySoldier.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Monster\\EnemySoldier.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\EnemySoldier.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Monster\\EnemySoldier.cpp",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAHMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-11T07:45:18.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "BasicMonster.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\BasicMonster.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Monster\\BasicMonster.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Monster\\BasicMonster.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Monster\\BasicMonster.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-08T15:45:38.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "GrabComponent.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\GrabComponent.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Component\\GrabComponent.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Component\\GrabComponent.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Component\\GrabComponent.cpp",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAFcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T06:20:34.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Soldier_Animinstance.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Soldier_Animinstance.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Animation\\Soldier_Animinstance.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Soldier_Animinstance.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Animation\\Soldier_Animinstance.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-11T08:05:14.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Hand_instance.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Hand_instance.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\Animation\\Hand_instance.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\Animation\\Hand_instance.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\Animation\\Hand_instance.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-27T14:24:04.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "BT_TASK_FindRandomPatrol.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\AI\\BT_TASK_FindRandomPatrol.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-12T12:27:40.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "ConstructorHelpers.h",
+              "DocumentMoniker": "E:\\UE_5.3\\Engine\\Source\\Runtime\\CoreUObject\\Public\\UObject\\ConstructorHelpers.h",
+              "ToolTip": "E:\\UE_5.3\\Engine\\Source\\Runtime\\CoreUObject\\Public\\UObject\\ConstructorHelpers.h [\uC77D\uAE30 \uC804\uC6A9]",
+              "ViewState": "AgIAAGwAAAAAAAAAAADgv6gAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-11T15:23:07.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "Object.h",
+              "DocumentMoniker": "E:\\UE_5.3\\Engine\\Source\\Runtime\\CoreUObject\\Public\\UObject\\Object.h",
+              "ToolTip": "E:\\UE_5.3\\Engine\\Source\\Runtime\\CoreUObject\\Public\\UObject\\Object.h [\uC77D\uAE30 \uC804\uC6A9]",
+              "ViewState": "AgIAAHcAAAAAAAAAAADgv48AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-11T07:55:18.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "TestActor.cpp",
+              "DocumentMoniker": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\TestActor.cpp",
+              "RelativeDocumentMoniker": "Source\\SQUAD\\TestActor.cpp",
+              "ToolTip": "D:\\Unreal_VR_Portfolio\\SQUAD\\Source\\SQUAD\\TestActor.cpp",
+              "RelativeToolTip": "Source\\SQUAD\\TestActor.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-19T09:12:09.345Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
